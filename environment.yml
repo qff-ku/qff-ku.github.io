@@ -1,0 +1,5 @@
+name: qff2026
+channels:
+  - conda-forge
+dependencies:
+  - nodejs=24

@@ -1,0 +1,48 @@
+---
+import type { EventContent } from "../data/2026";
+import "../styles/global.css";
+
+interface Props {
+  content: EventContent;
+}
+
+const { content } = Astro.props;
+const isKorean = content.lang === "ko";
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
+const koreanUrl = new URL("/2026/ko/", canonical);
+const englishUrl = new URL("/2026/en/", canonical);
+---
+
+<!doctype html>
+<html lang={content.lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={content.description} />
+    <meta property="og:title" content={content.title} />
+    <meta property="og:description" content={content.description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={content.ogLocale} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="ko" href={koreanUrl} />
+    <link rel="alternate" hreflang="en" href={englishUrl} />
+    <link rel="alternate" hreflang="x-default" href={koreanUrl} />
+    <title>{content.title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">{isKorean ? "본문 바로가기" : "Skip to content"}</a>
+    <header>
+      <a class="brand" href={isKorean ? "/2026/ko/" : "/2026/en/"}>QFF</a>
+      <nav aria-label={isKorean ? "언어 선택" : "Language selection"}>
+        <a href="/2026/ko/" aria-current={isKorean ? "page" : undefined}>한국어</a>
+        <a href="/2026/en/" aria-current={!isKorean ? "page" : undefined}>English</a>
+      </nav>
+    </header>
+    <main id="content">
+      <p class="eyebrow">2026 QFF</p>
+      <h1>{content.heading}</h1>
+      <p>{content.body}</p>
+    </main>
+  </body>
+</html>
