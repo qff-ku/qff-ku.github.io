@@ -2,8 +2,8 @@ export const eventContent = {
   ko: {
     lang: "ko",
     ogLocale: "ko_KR",
-    title: "2026 QFF",
-    description: "2026 QFF 공식 행사 안내",
+    title: "Qiskit Fall Fest 2026",
+    description: "Qiskit Fall Fest 2026 공식 행사 안내",
     navLabel: "주요 메뉴",
     languageLabel: "언어 선택",
     skipLabel: "본문 바로가기",
@@ -15,10 +15,10 @@ export const eventContent = {
       ["#faq", "FAQ"],
     ],
     hero: {
-      eyebrow: "2026 QFF",
+      eyebrow: "Qiskit Fall Fest 2026",
       status: "공식 정보 준비 중",
-      heading: "2026 QFF\n행사 안내",
-      summary: "2026 QFF의 확정된 행사 정보와 참가 안내를 이곳에서 순차적으로 공개합니다.",
+      heading: "Qiskit Fall Fest 2026\n행사 안내",
+      summary: "Qiskit Fall Fest 2026의 확정된 행사 정보와 참가 안내를 이곳에서 순차적으로 공개합니다.",
       dateLabel: "일정",
       date: "추후 공개",
       venueLabel: "장소",
@@ -27,7 +27,7 @@ export const eventContent = {
     },
     about: {
       eyebrow: "About",
-      title: "2026 QFF를 소개합니다",
+      title: "Qiskit Fall Fest 2026을 소개합니다",
       body: "행사의 공식 목적, 주제와 참가 대상은 운영진 확인 후 공개합니다. 확정되지 않은 정보는 임의로 게시하지 않습니다.",
     },
     program: {
@@ -66,14 +66,14 @@ export const eventContent = {
     },
     footer: {
       note: "공식 문의 이메일과 SNS는 확정 후 공개합니다.",
-      copyright: "© 2026 QFF",
+      copyright: "© Qiskit Fall Fest 2026",
     },
   },
   en: {
     lang: "en",
     ogLocale: "en_US",
-    title: "2026 QFF",
-    description: "Official information for 2026 QFF",
+    title: "Qiskit Fall Fest 2026",
+    description: "Official information for Qiskit Fall Fest 2026",
     navLabel: "Main navigation",
     languageLabel: "Language selection",
     skipLabel: "Skip to content",
@@ -85,10 +85,10 @@ export const eventContent = {
       ["#faq", "FAQ"],
     ],
     hero: {
-      eyebrow: "2026 QFF",
+      eyebrow: "Qiskit Fall Fest 2026",
       status: "Official details in progress",
-      heading: "2026 QFF\nEvent Information",
-      summary: "Confirmed event and registration details for 2026 QFF will be published here.",
+      heading: "Qiskit Fall Fest 2026\nEvent Information",
+      summary: "Confirmed event and registration details for Qiskit Fall Fest 2026 will be published here.",
       dateLabel: "Date",
       date: "To be announced",
       venueLabel: "Venue",
@@ -97,7 +97,7 @@ export const eventContent = {
     },
     about: {
       eyebrow: "About",
-      title: "Introducing 2026 QFF",
+      title: "Introducing Qiskit Fall Fest 2026",
       body: "The official purpose, theme, and audience will be published after organizer approval. Unconfirmed details will not be presented as fact.",
     },
     program: {
@@ -136,7 +136,7 @@ export const eventContent = {
     },
     footer: {
       note: "Official contact email and social links will be published after confirmation.",
-      copyright: "© 2026 QFF",
+      copyright: "© Qiskit Fall Fest 2026",
     },
   },
 } as const;
