@@ -31,18 +31,110 @@ const englishUrl = new URL("/2026/en/", canonical);
     <title>{content.title}</title>
   </head>
   <body>
-    <a class="skip-link" href="#content">{isKorean ? "본문 바로가기" : "Skip to content"}</a>
-    <header>
-      <a class="brand" href={isKorean ? "/2026/ko/" : "/2026/en/"}>QFF</a>
-      <nav aria-label={isKorean ? "언어 선택" : "Language selection"}>
-        <a href="/2026/ko/" aria-current={isKorean ? "page" : undefined}>한국어</a>
-        <a href="/2026/en/" aria-current={!isKorean ? "page" : undefined}>English</a>
-      </nav>
+    <a class="skip-link" href="#content">{content.skipLabel}</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href={isKorean ? "/2026/ko/" : "/2026/en/"} aria-label="QFF">QFF<span>26</span></a>
+        <nav class="section-nav" aria-label={content.navLabel}>
+          {content.nav.map(([href, label]) => <a href={href}>{label}</a>)}
+        </nav>
+        <nav class="language-nav" aria-label={content.languageLabel}>
+          <a href="/2026/ko/" lang="ko" aria-current={isKorean ? "page" : undefined}>KO</a>
+          <span aria-hidden="true">/</span>
+          <a href="/2026/en/" lang="en" aria-current={!isKorean ? "page" : undefined}>EN</a>
+        </nav>
+      </div>
     </header>
+
     <main id="content">
-      <p class="eyebrow">2026 QFF</p>
-      <h1>{content.heading}</h1>
-      <p>{content.body}</p>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="hero-meta">
+            <p class="eyebrow">{content.hero.eyebrow}</p>
+            <p class="status">{content.hero.status}</p>
+          </div>
+          <h1 id="hero-title">{content.hero.heading}</h1>
+          <p class="hero-summary">{content.hero.summary}</p>
+          <a class="text-link" href="#about">{content.hero.linkLabel}<span aria-hidden="true"> ↘</span></a>
+        </div>
+        <dl class="facts">
+          <div>
+            <dt>{content.hero.dateLabel}</dt>
+            <dd>{content.hero.date}</dd>
+          </div>
+          <div>
+            <dt>{content.hero.venueLabel}</dt>
+            <dd>{content.hero.venue}</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="section split" id="about" aria-labelledby="about-title">
+        <p class="eyebrow">{content.about.eyebrow}</p>
+        <div>
+          <h2 id="about-title">{content.about.title}</h2>
+          <p class="lead">{content.about.body}</p>
+        </div>
+      </section>
+
+      <section class="section" id="program" aria-labelledby="program-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">{content.program.eyebrow}</p>
+            <h2 id="program-title">{content.program.title}</h2>
+          </div>
+          <p>{content.program.body}</p>
+        </div>
+        <div class="empty-state"><span>01</span>{content.program.empty}</div>
+      </section>
+
+      <section class="section split" id="registration" aria-labelledby="registration-title">
+        <div>
+          <p class="eyebrow">{content.registration.eyebrow}</p>
+          <h2 id="registration-title">{content.registration.title}</h2>
+          <p>{content.registration.note}</p>
+        </div>
+        <dl class="info-list">
+          <div><dt>{content.registration.statusLabel}</dt><dd>{content.registration.status}</dd></div>
+          <div><dt>{content.registration.periodLabel}</dt><dd>{content.registration.period}</dd></div>
+          <div><dt>{content.registration.eligibilityLabel}</dt><dd>{content.registration.eligibility}</dd></div>
+        </dl>
+      </section>
+
+      <section class="section venue" id="venue" aria-labelledby="venue-title">
+        <div>
+          <p class="eyebrow">{content.venue.eyebrow}</p>
+          <h2 id="venue-title">{content.venue.title}</h2>
+          <p class="lead">{content.venue.body}</p>
+        </div>
+        <div class="map-placeholder" role="img" aria-label={content.venue.mapLabel}>
+          <span>QFF</span>
+          <p>{content.venue.mapLabel}</p>
+        </div>
+      </section>
+
+      <section class="section split" id="faq" aria-labelledby="faq-title">
+        <div>
+          <p class="eyebrow">{content.faq.eyebrow}</p>
+          <h2 id="faq-title">{content.faq.title}</h2>
+        </div>
+        <details>
+          <summary>{content.faq.question}</summary>
+          <p>{content.faq.answer}</p>
+        </details>
+      </section>
+
+      <section class="section partners" aria-labelledby="partners-title">
+        <p class="eyebrow">{content.partners.eyebrow}</p>
+        <h2 id="partners-title">{content.partners.title}</h2>
+        <p>{content.partners.body}</p>
+      </section>
     </main>
+
+    <footer>
+      <p class="brand">QFF<span>26</span></p>
+      <p>{content.footer.note}</p>
+      <p>{content.footer.copyright}</p>
+    </footer>
   </body>
 </html>
