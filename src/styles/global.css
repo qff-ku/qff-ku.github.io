@@ -5,7 +5,10 @@
   background: #f4f1e9;
   --line: #c8c4ba;
   --muted: #625f58;
-  --accent: #2449d8;
+  --crimson: #8b1538;
+  --crimson-dark: #5d0e27;
+  --crimson-soft: #ead8de;
+  --accent: var(--crimson);
 }
 
 * {
@@ -18,6 +21,12 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
+}
+
+::selection {
+  color: white;
+  background: var(--crimson);
 }
 
 a {
@@ -51,6 +60,7 @@ summary:focus-visible {
   top: 0;
   border-bottom: 1px solid var(--line);
   background: rgb(244 241 233 / 92%);
+  box-shadow: inset 0 0.25rem var(--crimson);
   backdrop-filter: blur(12px);
 }
 
@@ -141,8 +151,10 @@ footer {
 .status {
   margin: 0;
   padding: 0.45rem 0.75rem;
-  border: 1px solid currentColor;
+  border: 1px solid var(--crimson);
   border-radius: 10rem;
+  color: var(--crimson-dark);
+  background: var(--crimson-soft);
   font-size: 0.75rem;
 }
 
@@ -159,6 +171,7 @@ h1 {
   font-weight: 750;
   letter-spacing: -0.075em;
   line-height: 0.94;
+  text-wrap: balance;
   white-space: pre-line;
 }
 
@@ -185,6 +198,10 @@ h2 {
   width: fit-content;
   font-weight: 800;
   text-underline-offset: 0.35em;
+}
+
+.text-link span {
+  color: var(--crimson);
 }
 
 .facts {
@@ -247,14 +264,16 @@ dd {
   min-height: 12rem;
   margin-top: 4rem;
   padding: 2rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--crimson);
+  color: #fffaf5;
+  background: var(--crimson);
   font-size: clamp(1.4rem, 3vw, 2.5rem);
   font-weight: 750;
 }
 
 .empty-state span {
   align-self: flex-start;
-  color: var(--muted);
+  color: rgb(255 250 245 / 68%);
   font-size: 0.75rem;
 }
 
@@ -282,7 +301,8 @@ dd {
   place-content: center;
   min-height: 28rem;
   border: 1px solid var(--line);
-  background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-color: rgb(255 255 255 / 22%);
+  background-image: linear-gradient(rgb(139 21 56 / 18%) 1px, transparent 1px), linear-gradient(90deg, rgb(139 21 56 / 18%) 1px, transparent 1px);
   background-size: 3rem 3rem;
   text-align: center;
 }
@@ -318,6 +338,11 @@ details p {
   line-height: 1.7;
 }
 
+.partners {
+  padding-left: clamp(1.5rem, 4vw, 3rem);
+  border-left: 0.35rem solid var(--crimson);
+}
+
 .partners p:last-child {
   color: var(--muted);
 }
@@ -332,6 +357,18 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+@media (hover: hover) {
+  .section-nav a:hover,
+  .language-nav a:hover,
+  .text-link:hover {
+    color: var(--crimson);
+  }
+
+  summary:hover {
+    color: var(--crimson);
+  }
 }
 
 @media (max-width: 52rem) {
