@@ -35,7 +35,7 @@ const englishUrl = new URL("/2026/en/", canonical);
     <a class="skip-link" href="#content">{content.skipLabel}</a>
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href={isKorean ? "/2026/ko/" : "/2026/en/"} aria-label="QFF">QFF<span>26</span></a>
+        <a class="brand" href={isKorean ? "/2026/ko/" : "/2026/en/"} aria-label="Qiskit Fall Fest 2026">Qiskit Fall Fest <span>2026</span></a>
         <nav class="section-nav" aria-label={content.navLabel}>
           {content.nav.map(([href, label]) => <a href={href}>{label}</a>)}
         </nav>
@@ -109,7 +109,7 @@ const englishUrl = new URL("/2026/en/", canonical);
           <p class="lead">{content.venue.body}</p>
         </div>
         <div class="map-placeholder" role="img" aria-label={content.venue.mapLabel}>
-          <span>QFF</span>
+          <span>Qiskit Fall Fest</span>
           <p>{content.venue.mapLabel}</p>
         </div>
       </section>
@@ -133,7 +133,7 @@ const englishUrl = new URL("/2026/en/", canonical);
     </main>
 
     <footer>
-      <p class="brand">QFF<span>26</span></p>
+      <p class="brand">Qiskit Fall Fest <span>2026</span></p>
       <p>{content.footer.note}</p>
       <p>{content.footer.copyright}</p>
     </footer>
