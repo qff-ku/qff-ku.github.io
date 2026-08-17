@@ -18,6 +18,7 @@ export const eventContent = {
       eyebrow: "Qiskit Fall Fest 2026",
       status: "공식 정보 준비 중",
       heading: "Qiskit Fall Fest 2026\n행사 안내",
+      affiliation: "고려대학교에서 열리는 Qiskit Fall Fest 2026",
       summary: "Qiskit Fall Fest 2026의 확정된 행사 정보와 참가 안내를 이곳에서 순차적으로 공개합니다.",
       dateLabel: "일정",
       date: "추후 공개",
@@ -63,6 +64,8 @@ export const eventContent = {
       eyebrow: "Partners",
       title: "주최 · 주관 · 후원",
       body: "승인된 기관명과 로고만 게시합니다.",
+      logoAreaLabel: "기관 로고 영역",
+      logoLabels: ["고려대학교 로고", "동아리 로고"],
     },
     footer: {
       note: "공식 문의 이메일과 SNS는 확정 후 공개합니다.",
@@ -88,6 +91,7 @@ export const eventContent = {
       eyebrow: "Qiskit Fall Fest 2026",
       status: "Official details in progress",
       heading: "Qiskit Fall Fest 2026\nEvent Information",
+      affiliation: "Qiskit Fall Fest 2026 at Korea University",
       summary: "Confirmed event and registration details for Qiskit Fall Fest 2026 will be published here.",
       dateLabel: "Date",
       date: "To be announced",
@@ -133,6 +137,8 @@ export const eventContent = {
       eyebrow: "Partners",
       title: "Hosts · Organizers · Sponsors",
       body: "Only approved organization names and logos will be published.",
+      logoAreaLabel: "Organization logo area",
+      logoLabels: ["Korea University logo", "Club logo"],
     },
     footer: {
       note: "Official contact email and social links will be published after confirmation.",
