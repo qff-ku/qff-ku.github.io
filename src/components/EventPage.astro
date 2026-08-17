@@ -3,7 +3,7 @@ import type { EventContent } from "../data/2026";
 import "../styles/global.css";
 import clubLogo from "../../logo/QUICK_LOGO1.png";
 import eventArtwork from "../../logo/Fall Fest Sticker Large.png";
-import universityLogo from "../../logo/crimson2negative.gif";
+import universityLogo from "../../logo/black1negative.gif";
 
 interface Props {
   content: EventContent;
@@ -39,6 +39,7 @@ const englishUrl = new URL("/2026/en/", canonical);
     <header class="site-header">
       <div class="header-inner">
         <div class="site-identity">
+          <img class="sidebar-university-logo" src={universityLogo.src} width={universityLogo.width} height={universityLogo.height} alt="Korea University" />
           <a class="brand" href={isKorean ? "/2026/ko/" : "/2026/en/"} aria-label="Qiskit Fall Fest 2026 at Korea University">Qiskit Fall Fest <span>2026</span></a>
           <span class="affiliation">at Korea University</span>
         </div>
@@ -62,7 +63,7 @@ const englishUrl = new URL("/2026/en/", canonical);
           </div>
           <h1 id="hero-title">{content.hero.heading}</h1>
           <p class="hero-affiliation">{content.hero.affiliation}</p>
-          <p class="hero-summary">{content.hero.summary}</p>
+          <p class="hero-summary">{content.hero.summary} <span>{content.hero.summaryTail}</span></p>
           <a class="text-link" href="#about">{content.hero.linkLabel}<span aria-hidden="true"> ↘</span></a>
         </div>
         <dl class="facts">
@@ -146,12 +147,8 @@ const englishUrl = new URL("/2026/en/", canonical);
         <p class="partners-copy">{content.partners.body}</p>
         <div class="logo-grid" aria-label={content.partners.logoAreaLabel}>
           <figure class="logo-card">
-            <img src={universityLogo.src} width={universityLogo.width} height={universityLogo.height} alt="" loading="lazy" />
-            <figcaption>{content.partners.logoLabels[0]}</figcaption>
-          </figure>
-          <figure class="logo-card">
             <img src={clubLogo.src} width={clubLogo.width} height={clubLogo.height} alt="" loading="lazy" />
-            <figcaption>{content.partners.logoLabels[1]}</figcaption>
+            <figcaption>{content.partners.logoLabels[0]}</figcaption>
           </figure>
         </div>
       </section>

@@ -1,13 +1,13 @@
 :root {
   color-scheme: dark;
   font-family: Inter, Pretendard, "Noto Sans KR", system-ui, sans-serif;
-  color: #D6CABC;
+  color: #FFFFFF;
   background: #0d0f14;
   --line: rgb(214 202 188 / 20%);
   --muted: rgb(214 202 188 / 68%);
-  --crimson: #8B0029;
-  --crimson-dark: #57001A;
-  --crimson-soft: rgb(139 0 41 / 28%);
+  --crimson: #780822;
+  --crimson-dark: #4D0516;
+  --crimson-soft: rgb(120 8 34 / 28%);
   --secondary: #D6CABC;
   --accent: var(--secondary);
   --surface: #171a21;
@@ -25,7 +25,7 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
-  background: radial-gradient(circle at 75% 0%, rgb(139 0 41 / 22%), transparent 34rem), #0d0f14;
+  background: radial-gradient(circle at 75% 0%, rgb(120 8 34 / 22%), transparent 34rem), #0d0f14;
 }
 
 ::selection {
@@ -66,7 +66,7 @@ summary:focus-visible {
   left: 0;
   width: var(--sidebar);
   border-right: 1px solid rgb(214 202 188 / 35%);
-  color: var(--secondary);
+  color: #FFFFFF;
   background: var(--crimson);
   box-shadow: none;
   backdrop-filter: blur(12px);
@@ -114,6 +114,15 @@ footer {
   letter-spacing: 0.08em;
 }
 
+.sidebar-university-logo {
+  display: block;
+  width: 8rem;
+  height: auto;
+  margin-bottom: 1rem;
+  clip-path: inset(1px 1px 1px 4px);
+  mix-blend-mode: screen;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -125,7 +134,7 @@ nav {
   flex-direction: column;
   align-items: center;
   gap: 1.85rem;
-  color: var(--secondary);
+  color: #FFFFFF;
   font-size: 1.1rem;
   text-align: center;
 }
@@ -234,7 +243,12 @@ h2 {
 }
 
 .hero-summary {
+  max-width: 60rem;
   margin: 2rem 0;
+}
+
+.hero-summary span {
+  white-space: nowrap;
 }
 
 .hero-affiliation {
@@ -410,7 +424,7 @@ details p {
 
 .logo-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 28rem);
   gap: 1rem;
   margin-top: 3rem;
 }
@@ -497,6 +511,10 @@ footer p {
   .site-identity {
     justify-items: start;
     text-align: left;
+  }
+
+  .sidebar-university-logo {
+    display: none;
   }
 
   main,
