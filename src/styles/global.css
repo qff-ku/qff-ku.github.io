@@ -82,7 +82,7 @@ footer {
 .header-inner {
   display: flex;
   height: 100%;
-  padding: 2.5rem 2rem;
+  padding: 1.75rem 2rem;
   flex-direction: column;
   align-items: center;
 }
@@ -118,7 +118,7 @@ footer {
   display: block;
   width: 8rem;
   height: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
   clip-path: inset(1px 1px 1px 4px);
   mix-blend-mode: screen;
 }
@@ -130,10 +130,10 @@ nav {
 
 .section-nav {
   width: 100%;
-  margin-top: clamp(4rem, 12vh, 8rem);
+  margin-top: clamp(2.5rem, 8vh, 5rem);
   flex-direction: column;
   align-items: center;
-  gap: 1.85rem;
+  gap: 1.4rem;
   color: #FFFFFF;
   font-size: 1.1rem;
   text-align: center;
