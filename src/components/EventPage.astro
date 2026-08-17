@@ -48,11 +48,19 @@ const englishUrl = new URL("/2026/en/", canonical);
         </nav>
       </div>
     </header>
-    <nav class="language-nav" aria-label={content.languageLabel}>
-      <a href="/2026/ko/" lang="ko" aria-current={isKorean ? "page" : undefined}>KO</a>
-      <span aria-hidden="true">/</span>
-      <a href="/2026/en/" lang="en" aria-current={!isKorean ? "page" : undefined}>EN</a>
-    </nav>
+    <div class="top-controls">
+      <details class="mobile-menu">
+        <summary>{isKorean ? "메뉴" : "Menu"}</summary>
+        <nav aria-label={content.navLabel}>
+          {content.nav.map(([href, label]) => <a href={href}>{label}</a>)}
+        </nav>
+      </details>
+      <nav class="language-nav" aria-label={content.languageLabel}>
+        <a href="/2026/ko/" lang="ko" aria-current={isKorean ? "page" : undefined}>KO</a>
+        <span aria-hidden="true">/</span>
+        <a href="/2026/en/" lang="en" aria-current={!isKorean ? "page" : undefined}>EN</a>
+      </nav>
+    </div>
 
     <main id="content">
       <section class="hero" aria-labelledby="hero-title">
