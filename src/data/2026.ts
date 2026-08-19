@@ -24,19 +24,24 @@ export const eventContent = {
       dateLabel: "일정",
       date: "추후 공개",
       venueLabel: "장소",
-      venue: "추후 공개",
+      venue: "고려대학교 정운오IT교양관 (예정)",
       linkLabel: "행사 안내 보기",
+      registrationLabel: "참가 신청 준비 중",
     },
     about: {
       eyebrow: "About",
-      title: "Qiskit Fall Fest 2026을 소개합니다",
+      title: "Qiskit Fall Fest 2026을 소개합니다!",
       body: "행사의 공식 목적, 주제와 참가 대상은 운영진 확인 후 공개합니다. 확정되지 않은 정보는 임의로 게시하지 않습니다.",
     },
     program: {
       eyebrow: "Program",
       title: "프로그램",
       body: "세부 일정과 연사 정보는 확정되는 순서대로 업데이트합니다.",
-      empty: "프로그램 준비 중",
+      days: [
+        { label: "1일차", status: "세부 프로그램 준비 중" },
+        { label: "2일차", status: "세부 프로그램 준비 중" },
+        { label: "3일차", status: "세부 프로그램 준비 중" },
+      ],
     },
     registration: {
       eyebrow: "Registration",
@@ -52,8 +57,8 @@ export const eventContent = {
     venue: {
       eyebrow: "Venue",
       title: "장소 안내",
-      body: "건물명, 상세 주소와 교통 안내는 장소 확정 후 공개합니다.",
-      mapLabel: "지도 준비 중",
+      body: "행사 장소는 고려대학교 정운오IT교양관으로 안내할 예정입니다. 상세 강의실과 교통 안내는 확정 후 공개합니다.",
+      mapLabel: "고려대학교 정운오IT교양관 약도 준비 중",
     },
     faq: {
       eyebrow: "FAQ",
@@ -63,10 +68,10 @@ export const eventContent = {
     },
     partners: {
       eyebrow: "Partners",
-      title: "주최 · 주관 · 후원",
-      body: "승인된 기관명과 로고만 게시합니다.",
-      logoAreaLabel: "기관 로고 영역",
-      logoLabels: ["동아리 로고"],
+      title: "주최",
+      body: "Qiskit Fall Fest 2026은 고려대학교 양자정보학회 QUICK이 주최합니다.",
+      logoAreaLabel: "주최 단체 로고",
+      logoLabels: ["고려대학교 양자정보학회 QUICK"],
     },
     footer: {
       note: "공식 문의 이메일과 SNS는 확정 후 공개합니다.",
@@ -98,8 +103,9 @@ export const eventContent = {
       dateLabel: "Date",
       date: "To be announced",
       venueLabel: "Venue",
-      venue: "To be announced",
+      venue: "Korea University Jeong Wun-oh IT Hall (tentative)",
       linkLabel: "View event information",
+      registrationLabel: "Registration coming soon",
     },
     about: {
       eyebrow: "About",
@@ -110,7 +116,11 @@ export const eventContent = {
       eyebrow: "Program",
       title: "Program",
       body: "Schedule and speaker details will be updated as they are confirmed.",
-      empty: "Program in progress",
+      days: [
+        { label: "Day 1", status: "Program details in progress" },
+        { label: "Day 2", status: "Program details in progress" },
+        { label: "Day 3", status: "Program details in progress" },
+      ],
     },
     registration: {
       eyebrow: "Registration",
@@ -126,8 +136,8 @@ export const eventContent = {
     venue: {
       eyebrow: "Venue",
       title: "Venue information",
-      body: "Building, address, and transit details will be published after confirmation.",
-      mapLabel: "Map in progress",
+      body: "The event is tentatively planned for Jeong Wun-oh IT Hall at Korea University. Room and transit details will follow after confirmation.",
+      mapLabel: "Map for Korea University Jeong Wun-oh IT Hall in progress",
     },
     faq: {
       eyebrow: "FAQ",
@@ -137,10 +147,10 @@ export const eventContent = {
     },
     partners: {
       eyebrow: "Partners",
-      title: "Hosts · Organizers · Sponsors",
-      body: "Only approved organization names and logos will be published.",
-      logoAreaLabel: "Organization logo area",
-      logoLabels: ["Club logo"],
+      title: "Host",
+      body: "Qiskit Fall Fest 2026 is hosted by QUICK, the Korea University Quantum Information Society.",
+      logoAreaLabel: "Host organization logo",
+      logoLabels: ["QUICK · Korea University Quantum Information Society"],
     },
     footer: {
       note: "Official contact email and social links will be published after confirmation.",

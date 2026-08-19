@@ -2,7 +2,7 @@
 import type { EventContent } from "../data/2026";
 import "../styles/global.css";
 import clubLogo from "../../logo/QUICK_LOGO1.png";
-import eventArtwork from "../../logo/Fall Fest Sticker Large.png";
+import eventArtwork from "../../logo/Fall Fest Sticker Small.png";
 import universityLogo from "../../logo/black1negative.gif";
 
 interface Props {
@@ -63,6 +63,7 @@ const englishUrl = new URL("/2026/en/", canonical);
         <a href="/2026/en/" lang="en" aria-current={!isKorean ? "page" : undefined}>EN</a>
       </nav>
     </div>
+    <a class="floating-registration" href="#registration">{content.hero.registrationLabel}<span aria-hidden="true">↘</span></a>
 
     <main id="content">
       <section class="hero" aria-labelledby="hero-title">
@@ -88,20 +89,20 @@ const englishUrl = new URL("/2026/en/", canonical);
         </dl>
       </section>
 
-      <section class="section split" id="about" aria-labelledby="about-title">
-        <p class="eyebrow">{content.about.eyebrow}</p>
+      <section class="section about-layout" id="about" aria-labelledby="about-title">
         <div>
+          <p class="eyebrow">{content.about.eyebrow}</p>
           <h2 id="about-title">{content.about.title}</h2>
           <p class="lead">{content.about.body}</p>
-          <img
-            class="event-artwork"
-            src={eventArtwork.src}
-            width={eventArtwork.width}
-            height={eventArtwork.height}
-            alt={isKorean ? "Qiskit Fall Fest 2026 공식 행사 그래픽" : "Qiskit Fall Fest 2026 official event graphic"}
-            loading="lazy"
-          />
         </div>
+        <img
+          class="event-artwork"
+          src={eventArtwork.src}
+          width={eventArtwork.width}
+          height={eventArtwork.height}
+          alt={isKorean ? "Qiskit Fall Fest 2026 공식 행사 그래픽" : "Qiskit Fall Fest 2026 official event graphic"}
+          loading="lazy"
+        />
       </section>
 
       <section class="section" id="program" aria-labelledby="program-title">
@@ -112,7 +113,17 @@ const englishUrl = new URL("/2026/en/", canonical);
           </div>
           <p>{content.program.body}</p>
         </div>
-        <div class="empty-state"><span>01</span>{content.program.empty}</div>
+        <div class="program-grid">
+          {content.program.days.map((day, index) => (
+            <article class="program-day">
+              <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+              <div>
+                <h3>{day.label}</h3>
+                <p>{day.status}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section class="section split" id="registration" aria-labelledby="registration-title">
