@@ -1,7 +1,8 @@
 ---
 import type { EventContent } from "../data/2026";
 import "../styles/global.css";
-import clubLogo from "../../logo/QUICK_LOGO1.png";
+import clubLogo from "../../logo/QUICK_LOGO2.png";
+import sidebarClubLogo from "../../logo/QUICK_LOGO1.png";
 import eventArtwork from "../../logo/Fall Fest Sticker Small.png";
 import universityLogo from "../../logo/black1negative.gif";
 
@@ -39,8 +40,8 @@ const englishUrl = new URL("/2026/en/", canonical);
     <header class="site-header">
       <div class="header-inner">
         <div class="site-identity">
-          <a href={isKorean ? "/2026/ko/" : "/2026/en/"} aria-label={isKorean ? "홈으로 이동" : "Go to home"}>
-            <img class="sidebar-university-logo" src={universityLogo.src} width={universityLogo.width} height={universityLogo.height} alt="" />
+          <a class="sidebar-logo-link" href={isKorean ? "/2026/ko/" : "/2026/en/"} aria-label={isKorean ? "홈으로 이동" : "Go to home"}>
+            <img class="sidebar-club-logo" src={sidebarClubLogo.src} width={sidebarClubLogo.width} height={sidebarClubLogo.height} alt="" />
           </a>
           <a class="brand" href={isKorean ? "/2026/ko/" : "/2026/en/"} aria-label="Qiskit Fall Fest 2026 at Korea University">Qiskit Fall Fest <span>2026</span></a>
           <span class="affiliation">at Korea University</span>
@@ -48,6 +49,9 @@ const englishUrl = new URL("/2026/en/", canonical);
         <nav class="section-nav" aria-label={content.navLabel}>
           {content.nav.map(([href, label]) => <a href={href}>{label}</a>)}
         </nav>
+        <a class="sidebar-university-link" href={isKorean ? "/2026/ko/" : "/2026/en/"} aria-label={isKorean ? "홈으로 이동" : "Go to home"}>
+          <img class="sidebar-university-logo" src={universityLogo.src} width={universityLogo.width} height={universityLogo.height} alt="" />
+        </a>
       </div>
     </header>
     <div class="top-controls">
@@ -167,10 +171,18 @@ const englishUrl = new URL("/2026/en/", canonical);
         <h2 id="partners-title">{content.partners.title}</h2>
         <p class="partners-copy">{content.partners.body}</p>
         <div class="logo-grid" aria-label={content.partners.logoAreaLabel}>
-          <figure class="logo-card">
-            <img src={clubLogo.src} width={clubLogo.width} height={clubLogo.height} alt="" loading="lazy" />
-            <figcaption>{content.partners.logoLabels[0]}</figcaption>
-          </figure>
+          <a class="logo-link" href="https://quick.oopy.io/" target="_blank" rel="noopener noreferrer">
+            <figure class="logo-card">
+              <img src={clubLogo.src} width={clubLogo.width} height={clubLogo.height} alt="" loading="lazy" />
+              <figcaption>{content.partners.hostLabel}</figcaption>
+            </figure>
+          </a>
+          {content.partners.sponsorLabels.map((label) => (
+            <figure class="logo-card sponsor-placeholder">
+              <span aria-hidden="true">+</span>
+              <figcaption>{label}</figcaption>
+            </figure>
+          ))}
         </div>
       </section>
     </main>

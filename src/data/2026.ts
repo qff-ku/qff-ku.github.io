@@ -31,7 +31,7 @@ export const eventContent = {
     about: {
       eyebrow: "About",
       title: "Qiskit Fall Fest 2026을 소개합니다!",
-      body: "행사의 공식 목적, 주제와 참가 대상은 운영진 확인 후 공개합니다. 확정되지 않은 정보는 임의로 게시하지 않습니다.",
+      body: "행사의 공식 목적, 주제와 참가 대상은 운영진 확인 후 공개합니다.",
     },
     program: {
       eyebrow: "Program",
@@ -68,10 +68,11 @@ export const eventContent = {
     },
     partners: {
       eyebrow: "Partners",
-      title: "주최",
-      body: "Qiskit Fall Fest 2026은 고려대학교 양자정보학회 QUICK이 주최합니다.",
-      logoAreaLabel: "주최 단체 로고",
-      logoLabels: ["고려대학교 양자정보학회 QUICK"],
+      title: "주최 · 후원",
+      body: "Qiskit Fall Fest 2026은 고려대학교 양자정보학회 QUICK이 주최합니다. 후원기관은 확정 후 공개합니다.",
+      logoAreaLabel: "주최 및 후원 기관",
+      hostLabel: "고려대학교 양자정보학회 QUICK",
+      sponsorLabels: ["후원기관 로고 영역", "후원기관 로고 영역"],
     },
     footer: {
       note: "공식 문의 이메일과 SNS는 확정 후 공개합니다.",
@@ -110,7 +111,7 @@ export const eventContent = {
     about: {
       eyebrow: "About",
       title: "Introducing Qiskit Fall Fest 2026",
-      body: "The official purpose, theme, and audience will be published after organizer approval. Unconfirmed details will not be presented as fact.",
+      body: "The official purpose, theme, and audience will be published after organizer approval.",
     },
     program: {
       eyebrow: "Program",
@@ -147,10 +148,11 @@ export const eventContent = {
     },
     partners: {
       eyebrow: "Partners",
-      title: "Host",
-      body: "Qiskit Fall Fest 2026 is hosted by QUICK, the Korea University Quantum Information Society.",
-      logoAreaLabel: "Host organization logo",
-      logoLabels: ["QUICK · Korea University Quantum Information Society"],
+      title: "Host · Sponsors",
+      body: "Qiskit Fall Fest 2026 is hosted by QUICK, the Korea University Quantum Information Society. Sponsors will be announced after confirmation.",
+      logoAreaLabel: "Host and sponsor organizations",
+      hostLabel: "QUICK · Korea University Quantum Information Society",
+      sponsorLabels: ["Sponsor logo area", "Sponsor logo area"],
     },
     footer: {
       note: "Official contact email and social links will be published after confirmation.",
