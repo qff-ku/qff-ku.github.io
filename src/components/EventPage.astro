@@ -51,7 +51,7 @@ const englishUrl = new URL("/2026/en/", canonical);
         <nav class="section-nav" aria-label={content.navLabel}>
           {content.nav.map(([href, label]) => <a href={href}>{label}</a>)}
         </nav>
-        <a class="sidebar-university-link" href={isKorean ? "/2026/ko/" : "/2026/en/"} aria-label={isKorean ? "홈으로 이동" : "Go to home"}>
+        <a class="sidebar-university-link" href="https://www.korea.ac.kr/sites/ko/index.do" target="_blank" rel="noopener noreferrer" aria-label={isKorean ? "고려대학교 홈페이지로 이동" : "Visit the Korea University website"}>
           <img class="sidebar-university-logo" src={universityLogo.src} width={universityLogo.width} height={universityLogo.height} alt="" />
         </a>
       </div>
@@ -73,6 +73,7 @@ const englishUrl = new URL("/2026/en/", canonical);
 
     <main id="content">
       <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-orbit" aria-hidden="true"><span></span></div>
         <div class="hero-copy">
           <div class="hero-meta">
             <p class="eyebrow">{content.hero.eyebrow}</p>
@@ -179,13 +180,15 @@ const englishUrl = new URL("/2026/en/", canonical);
               <figcaption>{content.partners.hostLabel}</figcaption>
             </figure>
           </a>
-          <figure class="logo-card ibm-card">
-            <div class="ibm-lockup">
-              <img class="ibm-mark" src={ibmQuantumMark.src} width={ibmQuantumMark.width} height={ibmQuantumMark.height} alt="" loading="lazy" />
-              <img class="ibm-wordmark" src={ibmQuantumWordmark.src} width={ibmQuantumWordmark.width} height={ibmQuantumWordmark.height} alt="" loading="lazy" />
-            </div>
-            <figcaption>{content.partners.ibmLabel}</figcaption>
-          </figure>
+          <a class="logo-link" href="https://www.ibm.com/quantum" target="_blank" rel="noopener noreferrer">
+            <figure class="logo-card ibm-card">
+              <div class="ibm-lockup">
+                <img class="ibm-mark" src={ibmQuantumMark.src} width={ibmQuantumMark.width} height={ibmQuantumMark.height} alt="" loading="lazy" />
+                <img class="ibm-wordmark" src={ibmQuantumWordmark.src} width={ibmQuantumWordmark.width} height={ibmQuantumWordmark.height} alt="" loading="lazy" />
+              </div>
+              <figcaption>{content.partners.ibmLabel}</figcaption>
+            </figure>
+          </a>
           <figure class="logo-card sponsor-placeholder">
             <span aria-hidden="true">+</span>
             <figcaption>{content.partners.sponsorLabel}</figcaption>
@@ -199,5 +202,18 @@ const englishUrl = new URL("/2026/en/", canonical);
       <p>{content.footer.note}</p>
       <p>{content.footer.copyright}</p>
     </footer>
+    <script>
+      const links = Array.from(document.querySelectorAll<HTMLAnchorElement>(".section-nav a[href^='#']"));
+      const linksById = new Map(links.map((link) => [link.hash.slice(1), link]));
+      const observer = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          links.forEach((link) => link.removeAttribute("aria-current"));
+          linksById.get(entry.target.id)?.setAttribute("aria-current", "location");
+        }
+      }, { rootMargin: "-30% 0px -60%", threshold: 0 });
+
+      document.querySelectorAll("main > section").forEach((section) => observer.observe(section));
+    </script>
   </body>
 </html>
