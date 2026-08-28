@@ -573,6 +573,10 @@ details p {
   text-decoration: none;
 }
 
+.logo-link .logo-card {
+  height: 100%;
+}
+
 .logo-card {
   display: grid;
   isolation: isolate;
@@ -587,7 +591,7 @@ details p {
   background: #780822;
 }
 
-.logo-card img {
+.logo-card > img {
   width: auto;
   max-width: 100%;
   height: 10rem;
@@ -601,6 +605,28 @@ details p {
   letter-spacing: 0.08em;
   text-align: center;
   text-transform: uppercase;
+}
+
+.ibm-card {
+  color: #111111;
+  background: #FFFFFF;
+}
+
+.ibm-lockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ibm-mark {
+  width: 5.25rem;
+  height: auto;
+}
+
+.ibm-wordmark {
+  width: min(100%, 14rem);
+  height: auto;
 }
 
 .sponsor-placeholder {

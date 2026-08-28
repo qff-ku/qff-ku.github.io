@@ -69,10 +69,11 @@ export const eventContent = {
     partners: {
       eyebrow: "Partners",
       title: "주최 · 후원",
-      body: "Qiskit Fall Fest 2026은 고려대학교 양자정보학회 QUICK이 주최합니다. 후원기관은 확정 후 공개합니다.",
+      body: "Qiskit Fall Fest 2026은 고려대학교 양자정보학회 QUICK이 주최하고 IBM Quantum이 후원합니다. 추가 후원기관은 확정 후 공개합니다.",
       logoAreaLabel: "주최 및 후원 기관",
       hostLabel: "고려대학교 양자정보학회 QUICK",
-      sponsorLabels: ["후원기관 로고 영역", "후원기관 로고 영역"],
+      ibmLabel: "IBM Quantum",
+      sponsorLabel: "추가 후원기관 로고 영역",
     },
     footer: {
       note: "공식 문의 이메일과 SNS는 확정 후 공개합니다.",
@@ -149,10 +150,11 @@ export const eventContent = {
     partners: {
       eyebrow: "Partners",
       title: "Host · Sponsors",
-      body: "Qiskit Fall Fest 2026 is hosted by QUICK, the Korea University Quantum Information Society. Sponsors will be announced after confirmation.",
+      body: "Qiskit Fall Fest 2026 is hosted by QUICK, the Korea University Quantum Information Society, and sponsored by IBM Quantum. Additional sponsors will be announced after confirmation.",
       logoAreaLabel: "Host and sponsor organizations",
       hostLabel: "QUICK · Korea University Quantum Information Society",
-      sponsorLabels: ["Sponsor logo area", "Sponsor logo area"],
+      ibmLabel: "IBM Quantum",
+      sponsorLabel: "Additional sponsor logo area",
     },
     footer: {
       note: "Official contact email and social links will be published after confirmation.",
