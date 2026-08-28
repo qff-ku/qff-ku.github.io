@@ -54,12 +54,12 @@ body {
   position: absolute;
   z-index: 0;
   top: -20rem;
-  right: -18rem;
+  right: -22rem;
   width: 54rem;
   height: 54rem;
   border-radius: 50%;
   pointer-events: none;
-  background: radial-gradient(circle, rgb(52 86 209 / 20%), transparent 68%);
+  background: radial-gradient(circle, rgb(52 86 209 / 25%), transparent 68%);
   animation: ambient-glow 16s ease-in-out infinite alternate;
 }
 
