@@ -14,6 +14,9 @@ interface Props {
 
 const { content } = Astro.props;
 const isKorean = content.lang === "ko";
+const [heroTitle, heroSubtitle] = content.hero.heading.split("\n");
+const heroName = heroTitle.slice(0, -5);
+const heroYear = heroTitle.slice(-4);
 const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
 const koreanUrl = new URL("/2026/ko/", canonical);
 const englishUrl = new URL("/2026/en/", canonical);
@@ -102,9 +105,12 @@ const englishUrl = new URL("/2026/en/", canonical);
         <div class="hero-copy">
           <div class="hero-meta">
             <p class="eyebrow">{content.hero.eyebrow}</p>
-            <p class="status">{content.hero.status}</p>
+            <span class="sr-only">{content.hero.status}</span>
           </div>
-          <h1 id="hero-title">{content.hero.heading}</h1>
+          <h1 id="hero-title" aria-label={`${heroTitle} ${heroSubtitle}`}>
+            <span class="hero-title-primary">{heroName} <span class="hero-year">{heroYear}<span class="status hero-status" aria-hidden="true">{content.hero.status}</span></span></span>
+            <span class="hero-title-secondary">{heroSubtitle}</span>
+          </h1>
           <p class="hero-affiliation">{content.hero.affiliation}</p>
           <p class="hero-summary">{content.hero.summary} <span>{content.hero.summaryTail}</span></p>
           <a class="text-link" href="#about">{content.hero.linkLabel}<span aria-hidden="true"> ↘</span></a>
