@@ -26,6 +26,8 @@
   --crimson: #780822;
   --crimson-dark: #4D0516;
   --crimson-soft: rgb(120 8 34 / 28%);
+  --indigo: #3456D1;
+  --indigo-soft: rgb(52 86 209 / 24%);
   --secondary: #D6CABC;
   --accent: var(--secondary);
   --surface: #171a21;
@@ -44,12 +46,12 @@ body {
   position: relative;
   margin: 0;
   overflow-x: hidden;
-  background: radial-gradient(circle at 78% 0%, rgb(120 8 34 / 44%), transparent 44rem), #0d0f14;
+  background: radial-gradient(circle at 78% 0%, rgb(52 86 209 / 34%), transparent 44rem), #0d0f14;
 }
 
-body::before {
+.hero::before {
   content: "";
-  position: fixed;
+  position: absolute;
   z-index: 0;
   top: -20rem;
   right: -18rem;
@@ -57,7 +59,7 @@ body::before {
   height: 54rem;
   border-radius: 50%;
   pointer-events: none;
-  background: radial-gradient(circle, rgb(120 8 34 / 42%), transparent 68%);
+  background: radial-gradient(circle, rgb(52 86 209 / 22%), transparent 68%);
   animation: ambient-glow 16s ease-in-out infinite alternate;
 }
 
@@ -314,65 +316,107 @@ nav {
 .hero-orbit {
   position: absolute;
   z-index: 0;
-  top: 50%;
-  right: clamp(-8rem, -4vw, -1rem);
-  width: clamp(18rem, 32vw, 32rem);
+  top: 49%;
+  right: clamp(-9rem, -6vw, -3rem);
+  width: clamp(17rem, 28vw, 28rem);
   aspect-ratio: 1;
-  border: 1px solid rgb(214 202 188 / 18%);
   border-radius: 50%;
-  background: radial-gradient(circle, rgb(120 8 34 / 26%) 0 13%, transparent 14%);
-  opacity: 0.72;
+  background: radial-gradient(circle, rgb(52 86 209 / 20%) 0, transparent 62%);
+  opacity: 0.82;
   transform: translateY(-52%);
 }
 
-.hero-orbit::before,
-.hero-orbit::after {
-  content: "";
-  position: absolute;
-  inset: 13%;
-  border: 1px solid rgb(214 202 188 / 38%);
-  border-radius: 50%;
+.bloch-sphere {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 0 2rem rgb(52 86 209 / 20%));
 }
 
-.hero-orbit::before {
-  animation: orbit-one 22s linear infinite;
-  transform: rotate(58deg) scaleY(0.34);
+.bloch-outline,
+.bloch-ring,
+.bloch-axis,
+.bloch-vector {
+  fill: none;
+  vector-effect: non-scaling-stroke;
 }
 
-.hero-orbit::after {
-  animation: orbit-two 28s linear infinite reverse;
-  transform: rotate(-58deg) scaleY(0.34);
+.bloch-outline {
+  fill: rgb(52 86 209 / 6%);
+  stroke: rgb(214 202 188 / 54%);
+  stroke-width: 1.25;
 }
 
-.hero-orbit span {
-  position: absolute;
-  top: calc(50% - 0.55rem);
-  left: calc(50% - 0.55rem);
-  width: 1.1rem;
-  aspect-ratio: 1;
-  border: 1px solid var(--secondary);
-  border-radius: 50%;
-  background: var(--crimson);
-  box-shadow: 0 0 0 0.45rem rgb(214 202 188 / 10%), 0 0 2rem rgb(214 202 188 / 28%);
-  animation: orbit-core 2.8s ease-in-out infinite alternate;
+.bloch-ring {
+  stroke: rgb(214 202 188 / 42%);
+  stroke-width: 1;
+  stroke-dasharray: 5 7;
+  animation: bloch-flow 18s linear infinite;
 }
 
-@keyframes orbit-one {
+.bloch-axis {
+  stroke: rgb(214 202 188 / 24%);
+  stroke-width: 1;
+  stroke-dasharray: 3 7;
+}
+
+.bloch-state-vector {
+  transform-origin: 200px 200px;
+  animation: bloch-precession 7s ease-in-out infinite alternate;
+}
+
+.bloch-vector {
+  stroke: var(--secondary);
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 0.65rem rgb(52 86 209 / 70%));
+}
+
+.bloch-arrowhead {
+  fill: var(--secondary);
+}
+
+.bloch-state {
+  fill: var(--indigo);
+  stroke: white;
+  stroke-width: 1.5;
+}
+
+.bloch-core {
+  fill: white;
+  stroke: var(--indigo);
+  stroke-width: 3;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: bloch-pulse 2.8s ease-in-out infinite alternate;
+}
+
+.bloch-label {
+  fill: rgb(214 202 188 / 72%);
+  font-family: "Cambria Math", "STIX Two Math", "Times New Roman", serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.bloch-label-state {
+  fill: white;
+}
+
+@keyframes bloch-flow {
   to {
-    transform: rotate(418deg) scaleY(0.34);
+    stroke-dashoffset: -120;
   }
 }
 
-@keyframes orbit-two {
+@keyframes bloch-precession {
   to {
-    transform: rotate(302deg) scaleY(0.34);
+    transform: rotate(10deg);
   }
 }
 
-@keyframes orbit-core {
+@keyframes bloch-pulse {
   to {
-    box-shadow: 0 0 0 0.8rem rgb(214 202 188 / 4%), 0 0 3rem rgb(214 202 188 / 42%);
-    transform: scale(1.12);
+    opacity: 0.72;
+    transform: scale(1.45);
   }
 }
 
@@ -412,6 +456,7 @@ nav {
   display: grid;
   align-content: center;
   max-width: 68rem;
+  transform: translateY(-1.75rem);
 }
 
 .hero-meta,
@@ -438,7 +483,7 @@ footer {
   border: 1px solid var(--accent);
   border-radius: 10rem;
   color: var(--secondary);
-  background: var(--crimson-soft);
+  background: var(--indigo-soft);
   font-size: 0.75rem;
 }
 
@@ -525,15 +570,13 @@ h2 {
 
 #about,
 #program,
-#registration,
-#venue {
+#registration {
   isolation: isolate;
 }
 
 #about::before,
 #program::before,
-#registration::before,
-#venue::before {
+#registration::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -572,27 +615,36 @@ h2 {
 .floating-registration {
   position: fixed;
   z-index: 15;
-  top: 50%;
-  right: clamp(3rem, 6vw, 6.5rem);
-  display: flex;
+  top: auto;
+  right: clamp(2.5rem, 5vw, 5.75rem);
+  bottom: clamp(4.5rem, 6.25vw, 6.5rem);
+  display: grid;
   width: 8.5rem;
   min-height: 8.5rem;
   padding: 1.25rem;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 1rem;
+  place-items: center;
   border: 1px solid var(--accent);
   color: #FFFFFF;
-  background: var(--crimson);
+  background: #48536b;
   box-shadow: 0 1rem 2rem rgb(0 0 0 / 35%);
   font-size: 1rem;
   font-weight: 800;
   line-height: 1.35;
+  text-align: center;
   text-decoration: none;
-  transform: translateY(-50%);
+  transform: none;
 }
 
-.floating-registration span {
+.floating-registration-label {
+  max-width: 6.5rem;
+  text-wrap: balance;
+  word-break: keep-all;
+}
+
+.floating-registration-arrow {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.85rem;
   color: var(--accent);
 }
 
@@ -672,7 +724,7 @@ dd {
 }
 
 #registration::before {
-  background: #b9aed1;
+  background: #cac2df;
 }
 
 #registration .eyebrow {
@@ -741,10 +793,6 @@ dd {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr);
   gap: clamp(3rem, 8vw, 8rem);
-}
-
-#venue::before {
-  background: linear-gradient(135deg, rgb(214 202 188 / 7%), transparent 62%);
 }
 
 .map-placeholder {
@@ -901,12 +949,12 @@ footer p {
   }
 
   .floating-registration:hover {
-    color: var(--crimson);
+    color: #48536b;
     background: var(--secondary);
   }
 
-  .floating-registration:hover span {
-    color: var(--crimson);
+  .floating-registration:hover .floating-registration-arrow {
+    color: #48536b;
   }
 
   summary:hover {
@@ -931,6 +979,7 @@ footer p {
     top: auto;
     right: 1rem;
     bottom: 1rem;
+    display: flex;
     width: auto;
     min-height: auto;
     padding: 0.9rem 1.1rem;
@@ -939,6 +988,15 @@ footer p {
     border-radius: 10rem;
     white-space: nowrap;
     transform: none;
+  }
+
+  .floating-registration-label {
+    max-width: none;
+    white-space: nowrap;
+  }
+
+  .floating-registration-arrow {
+    position: static;
   }
 
   .site-header {
@@ -997,6 +1055,10 @@ footer p {
     opacity: 0.38;
   }
 
+  .hero-copy {
+    transform: translateY(-0.75rem);
+  }
+
   .about-layout,
   .split,
   .venue {
@@ -1005,8 +1067,7 @@ footer p {
 
   #about::before,
   #program::before,
-  #registration::before,
-  #venue::before {
+  #registration::before {
     left: -1.5rem;
     width: 100vw;
   }
@@ -1031,8 +1092,7 @@ footer p {
 
   #about::before,
   #program::before,
-  #registration::before,
-  #venue::before {
+  #registration::before {
     left: -1rem;
   }
 
@@ -1094,13 +1154,13 @@ footer p {
     scroll-behavior: auto;
   }
 
-  body::before,
+  .hero::before,
   .section,
   .hero-copy > *,
   .facts,
-  .hero-orbit::before,
-  .hero-orbit::after,
-  .hero-orbit span {
+  .bloch-ring,
+  .bloch-state-vector,
+  .bloch-core {
     animation: none;
   }
 

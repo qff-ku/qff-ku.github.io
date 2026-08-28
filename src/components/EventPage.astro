@@ -69,11 +69,36 @@ const englishUrl = new URL("/2026/en/", canonical);
         <a href="/2026/en/" lang="en" aria-current={!isKorean ? "page" : undefined}>EN</a>
       </nav>
     </div>
-    <a class="floating-registration" href="#registration">{content.hero.registrationLabel}<span aria-hidden="true">↘</span></a>
+    <a class="floating-registration" href="#registration">
+      <span class="floating-registration-label">{content.hero.registrationLabel}</span>
+      <span class="floating-registration-arrow" aria-hidden="true">↘</span>
+    </a>
 
     <main id="content">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-orbit" aria-hidden="true"><span></span></div>
+        <div class="hero-orbit" aria-hidden="true">
+          <svg class="bloch-sphere" viewBox="0 0 400 400">
+            <defs>
+              <marker id="bloch-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                <path class="bloch-arrowhead" d="M 0 0 L 10 5 L 0 10 Z"></path>
+              </marker>
+            </defs>
+            <circle class="bloch-outline" cx="200" cy="200" r="142"></circle>
+            <ellipse class="bloch-ring" cx="200" cy="200" rx="142" ry="46"></ellipse>
+            <ellipse class="bloch-ring" cx="200" cy="200" rx="46" ry="142" transform="rotate(36 200 200)"></ellipse>
+            <ellipse class="bloch-ring" cx="200" cy="200" rx="46" ry="142" transform="rotate(-36 200 200)"></ellipse>
+            <line class="bloch-axis" x1="200" y1="42" x2="200" y2="358"></line>
+            <line class="bloch-axis" x1="58" y1="200" x2="342" y2="200"></line>
+            <g class="bloch-state-vector">
+              <line class="bloch-vector" x1="200" y1="200" x2="296" y2="104" marker-end="url(#bloch-arrow)"></line>
+              <circle class="bloch-state" cx="296" cy="104" r="7"></circle>
+              <text class="bloch-label bloch-label-state" x="310" y="96">|ψ⟩</text>
+            </g>
+            <circle class="bloch-core" cx="200" cy="200" r="5"></circle>
+            <text class="bloch-label" x="200" y="42" text-anchor="middle">|0⟩</text>
+            <text class="bloch-label" x="200" y="374" text-anchor="middle">|1⟩</text>
+          </svg>
+        </div>
         <div class="hero-copy">
           <div class="hero-meta">
             <p class="eyebrow">{content.hero.eyebrow}</p>
