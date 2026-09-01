@@ -4,8 +4,8 @@ import "../styles/global.css";
 import clubLogo from "../../logo/QUICK_LOGO2.png";
 import sidebarClubLogo from "../../logo/QUICK_LOGO1.png";
 import eventArtwork from "../../logo/Fall Fest Sticker Small.png";
-import ibmQuantumMark from "../../logo/ibmq_logo.png";
-import ibmQuantumWordmark from "../../logo/ibmquantum_logo.png";
+import qiskitPictogram from "../../Pictogram/SVG/qiskit_purple-60.svg";
+import ibmQuantumLogotype from "../../IBM_Quantum/IBM_Quantum/Raster/RGB/IBM_Quantum_logotype_pos_RGB.png";
 import universityLogo from "../../logo/black1negative.gif";
 
 interface Props {
@@ -215,8 +215,8 @@ const englishUrl = new URL("/2026/en/", canonical);
           <a class="logo-link" href="https://www.ibm.com/quantum" target="_blank" rel="noopener noreferrer">
             <figure class="logo-card ibm-card">
               <div class="ibm-lockup">
-                <img class="ibm-mark" src={ibmQuantumMark.src} width={ibmQuantumMark.width} height={ibmQuantumMark.height} alt="" loading="lazy" />
-                <img class="ibm-wordmark" src={ibmQuantumWordmark.src} width={ibmQuantumWordmark.width} height={ibmQuantumWordmark.height} alt="" loading="lazy" />
+                <img class="ibm-mark" src={qiskitPictogram.src} width={qiskitPictogram.width} height={qiskitPictogram.height} alt="" loading="lazy" />
+                <img class="ibm-wordmark" src={ibmQuantumLogotype.src} width={ibmQuantumLogotype.width} height={ibmQuantumLogotype.height} alt="" loading="lazy" />
               </div>
               <figcaption>{content.partners.ibmLabel}</figcaption>
             </figure>
