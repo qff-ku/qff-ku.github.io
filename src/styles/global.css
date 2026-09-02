@@ -1137,10 +1137,14 @@ footer p {
 }
 
 @media (max-width: 34rem) {
+  .site-header {
+    width: 100vw;
+  }
+
   .header-inner,
   main,
   footer {
-    width: 100%;
+    width: 100vw;
     margin-inline: 0;
     padding-inline: 1rem;
   }
