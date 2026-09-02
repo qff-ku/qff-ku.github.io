@@ -40,6 +40,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -1137,14 +1138,10 @@ footer p {
 }
 
 @media (max-width: 34rem) {
-  .site-header {
-    width: 100vw;
-  }
-
   .header-inner,
   main,
   footer {
-    width: 100vw;
+    width: 100%;
     margin-inline: 0;
     padding-inline: 1rem;
   }
