@@ -22,9 +22,9 @@ export const eventContent = {
       summary: "Qiskit Fall Fest 2026의 확정된 행사 정보와 참가 안내를 이곳에서",
       summaryTail: "순차적으로 공개합니다.",
       dateLabel: "일정",
-      date: "추후 공개",
+      date: "2026. 11. 9. – 11. 19.",
       venueLabel: "장소",
-      venue: "고려대학교 정운오IT교양관 (예정)",
+      venue: "고려대학교 정운오IT교양관",
       linkLabel: "행사 안내 보기",
       registrationLabel: "참가 신청 준비 중",
     },
@@ -36,11 +36,12 @@ export const eventContent = {
     program: {
       eyebrow: "Program",
       title: "프로그램",
-      body: "세부 일정과 연사 정보는 확정되는 순서대로 업데이트합니다.",
+      body: "대면 행사와 온라인 콘텐츠 배포를 함께 진행합니다. 연사 정보는 확정 후 업데이트합니다.",
       days: [
-        { label: "1일차", status: "세부 프로그램 준비 중" },
-        { label: "2일차", status: "세부 프로그램 준비 중" },
-        { label: "3일차", status: "세부 프로그램 준비 중" },
+        { date: "11월 9일 (월)", title: "킥오프 및 초청 강연", detail: "교수 2인 강연 예정 · IBM 연사 협의 중", time: "18:00–20:30", format: "대면" },
+        { date: "11월 12일 (목)", title: "Qiskit 강의 자료 배포", detail: "온라인 강의 콘텐츠 공개", time: "18:00", format: "온라인" },
+        { date: "11월 14–15일 (토–일)", title: "간이 퀴즈 배포", detail: "기간 중 온라인 퀴즈 공개", time: "기간 중", format: "온라인" },
+        { date: "11월 19일 (목)", title: "본행사 및 해커톤", detail: "IBM 연사 협의 중", time: "18:00", format: "대면" },
       ],
     },
     registration: {
@@ -57,8 +58,8 @@ export const eventContent = {
     venue: {
       eyebrow: "Venue",
       title: "장소 안내",
-      body: "행사 장소는 고려대학교 정운오IT교양관으로 안내할 예정입니다. 상세 강의실과 교통 안내는 확정 후 공개합니다.",
-      mapLabel: "고려대학교 정운오IT교양관 약도 준비 중",
+      body: "행사 장소는 고려대학교 정운오IT교양관입니다. 상세 강의실과 교통 안내는 확정 후 공개합니다.",
+      mapLabel: "고려대학교 정운오IT교양관 약도",
     },
     faq: {
       eyebrow: "FAQ",
@@ -103,9 +104,9 @@ export const eventContent = {
       summary: "Confirmed event and registration details for Qiskit Fall Fest 2026",
       summaryTail: "will be published here.",
       dateLabel: "Date",
-      date: "To be announced",
+      date: "November 9–19, 2026",
       venueLabel: "Venue",
-      venue: "Korea University Jeong Wun-oh IT Hall (tentative)",
+      venue: "Korea University Jeong Wun-oh IT Hall",
       linkLabel: "View event information",
       registrationLabel: "Registration coming soon",
     },
@@ -117,11 +118,12 @@ export const eventContent = {
     program: {
       eyebrow: "Program",
       title: "Program",
-      body: "Schedule and speaker details will be updated as they are confirmed.",
+      body: "The program combines in-person events with online content releases. Speaker details will be updated after confirmation.",
       days: [
-        { label: "Day 1", status: "Program details in progress" },
-        { label: "Day 2", status: "Program details in progress" },
-        { label: "Day 3", status: "Program details in progress" },
+        { date: "November 9 (Mon)", title: "Kickoff and Guest Talks", detail: "Talks by two professors planned · IBM speaker under discussion", time: "18:00–20:30", format: "In person" },
+        { date: "November 12 (Thu)", title: "Qiskit Course Materials", detail: "Online course content release", time: "18:00", format: "Online" },
+        { date: "November 14–15 (Sat–Sun)", title: "Short Quiz Release", detail: "Online quizzes available during the period", time: "During the period", format: "Online" },
+        { date: "November 19 (Thu)", title: "Main Event and Hackathon", detail: "IBM speaker under discussion", time: "18:00", format: "In person" },
       ],
     },
     registration: {
@@ -138,8 +140,8 @@ export const eventContent = {
     venue: {
       eyebrow: "Venue",
       title: "Venue information",
-      body: "The event is tentatively planned for Jeong Wun-oh IT Hall at Korea University. Room and transit details will follow after confirmation.",
-      mapLabel: "Map for Korea University Jeong Wun-oh IT Hall in progress",
+      body: "The event will be held at Jeong Wun-oh IT Hall at Korea University. Room and transit details will follow after confirmation.",
+      mapLabel: "Map of Korea University Jeong Wun-oh IT Hall",
     },
     faq: {
       eyebrow: "FAQ",

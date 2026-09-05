@@ -7,6 +7,7 @@ import eventArtwork from "../../logo/Fall Fest Sticker Small.png";
 import qiskitPictogram from "../../Pictogram/SVG/qiskit_purple-60.svg";
 import ibmQuantumLogotype from "../../IBM_Quantum/IBM_Quantum/Raster/RGB/IBM_Quantum_logotype_pos_RGB.png";
 import universityLogo from "../../logo/black1negative.gif";
+import venueMap from "../../logo/정운오IT교양관약도.png";
 
 interface Props {
   content: EventContent;
@@ -155,10 +156,15 @@ const englishUrl = new URL("/2026/en/", canonical);
         <div class="program-grid">
           {content.program.days.map((day, index) => (
             <article class="program-day">
-              <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-              <div>
-                <h3>{day.label}</h3>
-                <p>{day.status}</p>
+              <span class="program-index" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+              <div class="program-content">
+                <p class="program-date">{day.date}</p>
+                <h3>{day.title}</h3>
+                <p>{day.detail}</p>
+                <div class="program-meta">
+                  <span>{day.time}</span>
+                  <span class="program-format">{day.format}</span>
+                </div>
               </div>
             </article>
           ))}
@@ -184,10 +190,7 @@ const englishUrl = new URL("/2026/en/", canonical);
           <h2 id="venue-title">{content.venue.title}</h2>
           <p class="lead">{content.venue.body}</p>
         </div>
-        <div class="map-placeholder" role="img" aria-label={content.venue.mapLabel}>
-          <span>Qiskit Fall Fest</span>
-          <p>{content.venue.mapLabel}</p>
-        </div>
+        <img class="venue-map" src={venueMap.src} width={venueMap.width} height={venueMap.height} alt={content.venue.mapLabel} loading="lazy" />
       </section>
 
       <section class="section split" id="faq" aria-labelledby="faq-title">
