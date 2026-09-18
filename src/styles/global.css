@@ -738,24 +738,6 @@ dd {
   scroll-margin-top: 4.5rem;
 }
 
-@keyframes section-reveal {
-  from {
-    opacity: 0.2;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@supports (animation-timeline: view()) {
-  .section {
-    animation: section-reveal 1ms linear both;
-    animation-timeline: view() !important;
-    animation-range: entry 5% cover 30%;
-  }
-}
-
 .split {
   display: grid;
   grid-template-columns: minmax(10rem, 0.7fr) minmax(0, 1.3fr);
@@ -786,7 +768,8 @@ dd {
 }
 
 [lang="en"] #registration h2 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  overflow-wrap: normal;
   white-space: nowrap;
 }
 
@@ -906,7 +889,6 @@ summary {
 details p {
   max-width: 42rem;
   margin: 0 0 1.5rem;
-  color: var(--muted);
   line-height: 1.7;
 }
 
@@ -914,8 +896,10 @@ details p {
   border-left: 0.35rem solid var(--accent);
 }
 
+.venue .lead,
+details p,
 .partners-copy {
-  color: var(--muted);
+  color: var(--secondary);
 }
 
 .logo-grid {
@@ -1330,7 +1314,6 @@ footer p {
   }
 
   .hero::before,
-  .section,
   .hero-copy > *,
   .facts,
   .bloch-ring,
@@ -1343,11 +1326,6 @@ footer p {
   ::view-transition-old(root),
   ::view-transition-new(root) {
     animation-duration: 1ms;
-  }
-
-  .section {
-    opacity: 1;
-    transform: none;
   }
 
   .program-day,
