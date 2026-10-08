@@ -36,12 +36,12 @@ export const eventContent = {
     program: {
       eyebrow: "Program",
       title: "프로그램",
-      body: "대면 행사와 온라인 콘텐츠 배포를 함께 진행합니다. 연사 정보는 확정 후 업데이트합니다.",
+      body: "킥오프 및 연사 강연, 온라인 Qiskit 강의와 간이 퀴즈 배포, IBM 연사 강연과 해커톤을 진행합니다.",
       days: [
-        { date: "11월 9일 (월)", title: "킥오프 및 초청 강연", detail: "교수 2인 강연 예정 · IBM 연사 협의 중", time: "18:00–20:30", format: "대면" },
-        { date: "11월 12일 (목)", title: "Qiskit 강의 자료 배포", detail: "온라인 강의 콘텐츠 공개", time: "18:00", format: "온라인" },
+        { date: "11월 9일 (월)", title: "킥오프 및 연사 강연", detail: "김민혁 교수님 강연", time: "18:00–20:30", format: "대면" },
+        { date: "11월 12일 (목)", title: "Qiskit 강의 배포", detail: "온라인 강의 배포", time: "18:00", format: "온라인" },
         { date: "11월 14–15일 (토–일)", title: "간이 퀴즈 배포", detail: "기간 중 온라인 퀴즈 공개", time: "기간 중", format: "온라인" },
-        { date: "11월 19일 (목)", title: "본행사 및 해커톤", detail: "IBM 연사 협의 중", time: "18:00", format: "대면" },
+        { date: "11월 19일 (목)", title: "본행사", detail: "IBM 연사 강연 + 해커톤", time: "18:00–21:00", format: "대면" },
       ],
     },
     registration: {
@@ -118,12 +118,12 @@ export const eventContent = {
     program: {
       eyebrow: "Program",
       title: "Program",
-      body: "The program combines in-person events with online content releases. Speaker details will be updated after confirmation.",
+      body: "The program includes a kickoff and guest talk, online Qiskit lectures and short quizzes, and an IBM guest talk and hackathon.",
       days: [
-        { date: "November 9 (Mon)", title: "Kickoff and Guest Talks", detail: "Talks by two professors planned · IBM speaker under discussion", time: "18:00–20:30", format: "In person" },
-        { date: "November 12 (Thu)", title: "Qiskit Course Materials", detail: "Online course content release", time: "18:00", format: "Online" },
+        { date: "November 9 (Mon)", title: "Kickoff and Guest Talk", detail: "Talk by Professor Minhyuk Kim", time: "18:00–20:30", format: "In person" },
+        { date: "November 12 (Thu)", title: "Qiskit Lecture Release", detail: "Online lecture release", time: "18:00", format: "Online" },
         { date: "November 14–15 (Sat–Sun)", title: "Short Quiz Release", detail: "Online quizzes available during the period", time: "During the period", format: "Online" },
-        { date: "November 19 (Thu)", title: "Main Event and Hackathon", detail: "IBM speaker under discussion", time: "18:00", format: "In person" },
+        { date: "November 19 (Thu)", title: "Main Event", detail: "IBM guest talk + hackathon", time: "18:00–21:00", format: "In person" },
       ],
     },
     registration: {
