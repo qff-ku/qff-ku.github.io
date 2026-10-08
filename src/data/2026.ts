@@ -24,7 +24,7 @@ export const eventContent = {
       dateLabel: "일정",
       date: "2026. 11. 9. – 11. 19.",
       venueLabel: "장소",
-      venue: "고려대학교 정운오IT교양관",
+      venue: "고려대학교 하나과학관",
       linkLabel: "행사 안내 보기",
       registrationLabel: "10월 15일 신청 시작",
     },
@@ -58,8 +58,8 @@ export const eventContent = {
     venue: {
       eyebrow: "Venue",
       title: "장소 안내",
-      body: "행사 장소는 고려대학교 정운오IT교양관입니다. 상세 강의실과 교통 안내는 확정 후 공개합니다.",
-      mapLabel: "고려대학교 정운오IT교양관 약도",
+      body: "행사 장소는 고려대학교 하나과학관입니다. 상세 강의실과 교통 안내는 확정 후 공개합니다.",
+      mapLabel: "고려대학교 하나과학관 약도",
     },
     faq: {
       eyebrow: "FAQ",
@@ -106,7 +106,7 @@ export const eventContent = {
       dateLabel: "Date",
       date: "November 9–19, 2026",
       venueLabel: "Venue",
-      venue: "Korea University Jeong Wun-oh IT Hall",
+      venue: "Korea University Hana Science Hall",
       linkLabel: "View event information",
       registrationLabel: "Opens October 15",
     },
@@ -140,8 +140,8 @@ export const eventContent = {
     venue: {
       eyebrow: "Venue",
       title: "Venue information",
-      body: "The event will be held at Jeong Wun-oh IT Hall at Korea University. Room and transit details will follow after confirmation.",
-      mapLabel: "Map of Korea University Jeong Wun-oh IT Hall",
+      body: "The event will be held at Hana Science Hall at Korea University. Room and transit details will follow after confirmation.",
+      mapLabel: "Map of Korea University Hana Science Hall",
     },
     faq: {
       eyebrow: "FAQ",
