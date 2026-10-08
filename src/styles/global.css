@@ -953,6 +953,10 @@ details p,
   background: #FFFFFF;
 }
 
+.quantum-school-card {
+  background: #000000;
+}
+
 .ibm-lockup {
   display: flex;
   flex-direction: column;
@@ -968,18 +972,6 @@ details p,
 .ibm-wordmark {
   width: min(100%, 14rem);
   height: auto;
-}
-
-.sponsor-placeholder {
-  border-style: dashed;
-  color: var(--muted);
-  background: transparent;
-}
-
-.sponsor-placeholder span {
-  color: var(--secondary);
-  font-size: 3rem;
-  font-weight: 200;
 }
 
 footer {

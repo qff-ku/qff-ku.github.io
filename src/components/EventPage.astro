@@ -7,7 +7,8 @@ import eventArtwork from "../../logo/Fall Fest Sticker Small.png";
 import qiskitPictogram from "../../Pictogram/SVG/qiskit_purple-60.svg";
 import ibmQuantumLogotype from "../../IBM_Quantum/IBM_Quantum/Raster/RGB/IBM_Quantum_logotype_pos_RGB.png";
 import universityLogo from "../../logo/black1negative.gif";
-import venueMap from "../../하나과학관.png";
+import venueMap from "../../logo/하나과학관.png";
+import quantumSchoolLogo from "../../logo/고려대학교양자대학원1.png";
 
 interface Props {
   content: EventContent;
@@ -224,10 +225,12 @@ const englishUrl = new URL("/2026/en/", canonical);
               <figcaption>{content.partners.ibmLabel}</figcaption>
             </figure>
           </a>
-          <figure class="logo-card sponsor-placeholder">
-            <span aria-hidden="true">+</span>
-            <figcaption>{content.partners.sponsorLabel}</figcaption>
-          </figure>
+          <a class="logo-link" href="https://www.quantumworkforce.kr/" target="_blank" rel="noopener noreferrer">
+            <figure class="logo-card quantum-school-card">
+              <img src={quantumSchoolLogo.src} width={quantumSchoolLogo.width} height={quantumSchoolLogo.height} alt="" loading="lazy" />
+              <figcaption>{content.partners.quantumSchoolLabel}</figcaption>
+            </figure>
+          </a>
         </div>
       </section>
     </main>
