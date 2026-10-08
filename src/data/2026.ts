@@ -26,7 +26,7 @@ export const eventContent = {
       venueLabel: "장소",
       venue: "고려대학교 정운오IT교양관",
       linkLabel: "행사 안내 보기",
-      registrationLabel: "10월 9일 신청 시작",
+      registrationLabel: "10월 15일 신청 시작",
     },
     about: {
       eyebrow: "About",
@@ -50,10 +50,10 @@ export const eventContent = {
       statusLabel: "현재 상태",
       status: "신청 전",
       periodLabel: "신청 시작일",
-      period: "2026. 10. 9. (금)",
+      period: "2026. 10. 15. (목)",
       eligibilityLabel: "참가 대상",
       eligibility: "추후 공개",
-      note: "참가 신청은 2026년 10월 9일(금)에 시작됩니다. 신청 폼은 오픈 당일 이곳에 연결합니다.",
+      note: "참가 신청은 2026년 10월 15일(목)에 시작됩니다. 신청 폼은 오픈 당일 이곳에 연결합니다.",
     },
     venue: {
       eyebrow: "Venue",
@@ -108,7 +108,7 @@ export const eventContent = {
       venueLabel: "Venue",
       venue: "Korea University Jeong Wun-oh IT Hall",
       linkLabel: "View event information",
-      registrationLabel: "Opens October 9",
+      registrationLabel: "Opens October 15",
     },
     about: {
       eyebrow: "About",
@@ -132,10 +132,10 @@ export const eventContent = {
       statusLabel: "Current status",
       status: "Not yet open",
       periodLabel: "Registration opens",
-      period: "Friday, October 9, 2026",
+      period: "Thursday, October 15, 2026",
       eligibilityLabel: "Eligibility",
       eligibility: "To be announced",
-      note: "Registration opens Friday, October 9, 2026. The registration form will be available here when registration opens.",
+      note: "Registration opens Thursday, October 15, 2026. The registration form will be available here when registration opens.",
     },
     venue: {
       eyebrow: "Venue",
