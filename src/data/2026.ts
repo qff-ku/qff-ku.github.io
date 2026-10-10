@@ -15,12 +15,9 @@ export const eventContent = {
       ["#faq", "FAQ"],
     ],
     hero: {
-      eyebrow: "Qiskit Fall Fest 2026",
       status: "공식 정보 준비 중",
       heading: "Qiskit Fall Fest 2026\n행사 안내",
-      affiliation: "고려대학교에서 열리는 Qiskit Fall Fest 2026",
-      summary: "Qiskit Fall Fest 2026의 확정된 행사 정보와 참가 안내를 이곳에서",
-      summaryTail: "순차적으로 공개합니다.",
+      summary: "강연·Qiskit 강의·퀴즈·해커톤으로 이어지는 프로그램과 참가 안내를 확인하세요.",
       dateLabel: "일정",
       date: "2026. 11. 9. – 11. 19.",
       venueLabel: "장소",
@@ -31,7 +28,7 @@ export const eventContent = {
     about: {
       eyebrow: "About",
       title: "Qiskit Fall Fest 2026을 소개합니다!",
-      body: "행사의 공식 목적, 주제와 참가 대상은 운영진 확인 후 공개합니다.",
+      body: "고려대학교 학생을 대상으로 진행하는 행사입니다. 공식 목적과 주제는 운영진 확인 후 공개합니다.",
     },
     program: {
       eyebrow: "Program",
@@ -52,20 +49,52 @@ export const eventContent = {
       periodLabel: "신청 시작일",
       period: "2026. 10. 15. (목)",
       eligibilityLabel: "참가 대상",
-      eligibility: "추후 공개",
+      eligibility: "고려대학교 학생",
       note: "참가 신청은 2026년 10월 15일(목)에 시작됩니다. 신청 폼은 오픈 당일 이곳에 연결합니다.",
     },
     venue: {
       eyebrow: "Venue",
       title: "장소 안내",
-      body: "행사 장소는 고려대학교 하나과학관입니다. 상세 강의실과 교통 안내는 확정 후 공개합니다.",
+      body: "대면 세션은 고려대학교 하나과학관 B206에서 진행될 예정입니다. 최종 강의실과 교통 안내는 확정 후 공개합니다.",
       mapLabel: "고려대학교 하나과학관 약도",
     },
     faq: {
       eyebrow: "FAQ",
       title: "자주 묻는 질문",
-      question: "참가와 행사 운영에 관한 안내",
-      answer: "참가 자격, 준비물, 신청 변경과 언어 지원 정보는 확정 후 게시합니다.",
+      items: [
+        {
+          question: "참가 신청은 언제 시작하나요?",
+          answer: "참가 신청은 2026년 10월 15일(목)에 시작됩니다. 신청 폼은 오픈 당일 홈페이지에 연결됩니다.",
+        },
+        {
+          question: "고려대학교 학생이 아니어도 참가할 수 있나요?",
+          answer: "이번 행사는 고려대학교 학생을 대상으로 진행됩니다.",
+        },
+        {
+          question: "전공이나 양자컴퓨팅 경험이 없어도 참가할 수 있나요?",
+          answer: "네. 전공이나 양자컴퓨팅·Qiskit 경험과 관계없이 참가할 수 있습니다. 행사 세션에서 필요한 내용을 안내하므로 처음 접하는 분도 참여하실 수 있습니다.",
+        },
+        {
+          question: "수료증을 받으려면 어떤 조건을 충족해야 하나요?",
+          answer: "수료증을 받으려면 킥오프 및 연사 강연, 온라인 Qiskit 강의, 간이 퀴즈, 본행사(IBM 연사 강연 및 해커톤)를 포함한 모든 행사에 참여해야 합니다.",
+        },
+        {
+          question: "개인으로 참가할 수 있나요?",
+          answer: "개인 단위로 신청하고 참가합니다.",
+        },
+        {
+          question: "참가비가 있나요?",
+          answer: "참가비는 없습니다.",
+        },
+        {
+          question: "노트북이나 사전 설치가 필요한가요?",
+          answer: "노트북을 지참해 주세요. 실습에 필요한 패키지는 제공되는 Jupyter 노트북(.ipynb) 내에 포함될 예정입니다.",
+        },
+        {
+          question: "행사는 어디에서 진행되나요?",
+          answer: "대면 세션은 고려대학교 하나과학관 B206에서 진행될 예정입니다. 최종 강의실은 확정 후 홈페이지에 안내합니다.",
+        },
+      ],
     },
     partners: {
       eyebrow: "Partners",
@@ -97,12 +126,9 @@ export const eventContent = {
       ["#faq", "FAQ"],
     ],
     hero: {
-      eyebrow: "Qiskit Fall Fest 2026",
       status: "Official details in progress",
       heading: "Qiskit Fall Fest 2026\nEvent Information",
-      affiliation: "Qiskit Fall Fest 2026 at Korea University",
-      summary: "Confirmed event and registration details for Qiskit Fall Fest 2026",
-      summaryTail: "will be published here.",
+      summary: "Explore the talks, Qiskit lectures, quizzes, hackathon, and registration details.",
       dateLabel: "Date",
       date: "November 9–19, 2026",
       venueLabel: "Venue",
@@ -113,7 +139,7 @@ export const eventContent = {
     about: {
       eyebrow: "About",
       title: "Introducing Qiskit Fall Fest 2026",
-      body: "The official purpose, theme, and audience will be published after organizer approval.",
+      body: "This event is for Korea University students. The official purpose and theme will be published after organizer approval.",
     },
     program: {
       eyebrow: "Program",
@@ -134,20 +160,52 @@ export const eventContent = {
       periodLabel: "Registration opens",
       period: "Thursday, October 15, 2026",
       eligibilityLabel: "Eligibility",
-      eligibility: "To be announced",
+      eligibility: "Korea University students",
       note: "Registration opens Thursday, October 15, 2026. The registration form will be available here when registration opens.",
     },
     venue: {
       eyebrow: "Venue",
       title: "Venue information",
-      body: "The event will be held at Hana Science Hall at Korea University. Room and transit details will follow after confirmation.",
+      body: "In-person sessions are planned for room B206 in Hana Science Hall at Korea University. The final room and transit details will be published after confirmation.",
       mapLabel: "Map of Korea University Hana Science Hall",
     },
     faq: {
       eyebrow: "FAQ",
       title: "Frequently asked questions",
-      question: "Participation and event operations",
-      answer: "Eligibility, materials, application changes, and language support will be published after confirmation.",
+      items: [
+        {
+          question: "When does registration open?",
+          answer: "Registration opens on Thursday, October 15, 2026. The registration form will be linked on the website that day.",
+        },
+        {
+          question: "Can students from other universities participate?",
+          answer: "This event is for Korea University students.",
+        },
+        {
+          question: "Can I participate without a relevant major or quantum computing experience?",
+          answer: "Yes. You can participate regardless of your major or prior experience with quantum computing or Qiskit. The event sessions will cover what you need, so beginners are welcome.",
+        },
+        {
+          question: "What are the requirements for a certificate of completion?",
+          answer: "To receive a certificate of completion, you must participate in all event activities: the kickoff and guest talk, online Qiskit lectures, short quizzes, and the main event (IBM guest talk and hackathon).",
+        },
+        {
+          question: "Can I participate individually?",
+          answer: "Registration and participation are on an individual basis.",
+        },
+        {
+          question: "Is there a participation fee?",
+          answer: "There is no participation fee.",
+        },
+        {
+          question: "Do I need a laptop or any software installed in advance?",
+          answer: "Please bring a laptop. The packages needed for the exercises are planned to be included in the provided Jupyter notebook (.ipynb).",
+        },
+        {
+          question: "Where will the event take place?",
+          answer: "In-person sessions are planned for room B206 in Hana Science Hall at Korea University. The final room will be announced on the website once confirmed.",
+        },
+      ],
     },
     partners: {
       eyebrow: "Partners",
