@@ -611,13 +611,15 @@ h2 {
 
 #about,
 #program,
-#registration {
+#registration,
+#faq {
   isolation: isolate;
 }
 
 #about::before,
 #program::before,
-#registration::before {
+#registration::before,
+#faq::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -719,7 +721,7 @@ dd {
 .section-heading > p {
   max-width: 28rem;
   margin: 0;
-  color: var(--muted);
+  color: #C9D1DE;
   line-height: 1.7;
 }
 
@@ -733,6 +735,10 @@ dd {
 
 #registration::before {
   background: #cac2df;
+}
+
+#faq::before {
+  background: #18243A;
 }
 
 #registration .eyebrow {
@@ -773,6 +779,29 @@ dd {
   transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
+.program-main-event {
+  position: relative;
+  border: 2px solid var(--indigo);
+  background: linear-gradient(145deg, var(--indigo-soft), var(--surface));
+}
+
+.program-main-event h3 {
+  color: #FFFFFF;
+}
+
+.program-highlight {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  color: #FFFFFF;
+  background: var(--indigo);
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
 .program-index {
   color: rgb(214 202 188 / 68%);
   font-size: 0.75rem;
@@ -799,7 +828,7 @@ dd {
 
 .program-day p {
   margin: 0;
-  color: var(--muted);
+  color: #C9D1DE;
   line-height: 1.6;
 }
 
@@ -872,10 +901,6 @@ details p {
   max-width: 42rem;
   margin: 0 0 1.5rem;
   line-height: 1.7;
-}
-
-.partners {
-  border-left: 0.35rem solid var(--accent);
 }
 
 .venue .lead,
@@ -996,10 +1021,21 @@ footer p {
     transform: translateY(-0.3rem);
   }
 
+  .program-main-event:hover {
+    border-color: var(--indigo);
+  }
+
   .logo-link:hover .logo-card {
     border-color: var(--secondary);
     box-shadow: 0 1.25rem 2.5rem rgb(0 0 0 / 24%);
     transform: translateY(-0.3rem);
+  }
+}
+
+@media (width > 64rem) {
+  #registration,
+  .partners {
+    padding-block: clamp(3.75rem, 8.25vw, 7.5rem);
   }
 }
 
@@ -1071,7 +1107,8 @@ footer p {
 
   #about::before,
   #program::before,
-  #registration::before {
+  #registration::before,
+  #faq::before {
     left: -1.5rem;
     width: 100vw;
   }
@@ -1098,7 +1135,8 @@ footer p {
 
   #about::before,
   #program::before,
-  #registration::before {
+  #registration::before,
+  #faq::before {
     left: -1rem;
   }
 
@@ -1216,10 +1254,6 @@ footer p {
     grid-template-columns: 1fr;
     gap: 0.75rem;
     margin-top: 2rem;
-  }
-
-  .partners {
-    border-left: 0;
   }
 
   .logo-card {
