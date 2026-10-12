@@ -9,6 +9,7 @@ import ibmQuantumLogotype from "../../IBM_Quantum/IBM_Quantum/Raster/RGB/IBM_Qua
 import universityLogo from "../../logo/black1negative.gif";
 import venueMap from "../../logo/하나과학관.png";
 import quantumSchoolLogo from "../../logo/고려대학교양자대학원1.png";
+import qiscaLogo from "../../logo/QISCA logo.png";
 
 interface Props {
   content: EventContent;
@@ -129,6 +130,7 @@ const englishUrl = new URL("/2026/en/", canonical);
           <p class="eyebrow">{content.about.eyebrow}</p>
           <h2 id="about-title">{content.about.title}</h2>
           <p class="lead">{content.about.body}</p>
+          <p class="lead">{content.about.localBody}</p>
         </div>
         <img
           class="event-artwork"
@@ -230,13 +232,22 @@ const englishUrl = new URL("/2026/en/", canonical);
               <figcaption>{content.partners.quantumSchoolLabel}</figcaption>
             </figure>
           </a>
+          <a class="logo-link" href="https://www.qisca.org/ko" target="_blank" rel="noopener noreferrer">
+            <figure class="logo-card qisca-card">
+              <img src={qiscaLogo.src} width={qiscaLogo.width} height={qiscaLogo.height} alt="" loading="lazy" />
+              <figcaption>QISCA</figcaption>
+            </figure>
+          </a>
         </div>
       </section>
     </main>
 
     <footer>
       <p class="brand">Qiskit Fall Fest <span>2026</span></p>
-      <p>{content.footer.note}</p>
+      <div class="footer-contact">
+        <p><span>{content.footer.contactLabel}</span><a class="text-link" href="mailto:kuquickofficial@gmail.com">kuquickofficial@gmail.com</a></p>
+        <p><span>Instagram</span><a class="text-link" href="https://www.instagram.com/ku_quick/" target="_blank" rel="noopener noreferrer">@ku_quick</a></p>
+      </div>
       <p>{content.footer.copyright}</p>
     </footer>
     <script>

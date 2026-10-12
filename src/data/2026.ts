@@ -28,7 +28,8 @@ export const eventContent = {
     about: {
       eyebrow: "About",
       title: "Qiskit Fall Fest 2026을 소개합니다!",
-      body: "고려대학교 학생을 대상으로 진행하는 행사입니다. 공식 목적과 주제는 운영진 확인 후 공개합니다.",
+      body: "Qiskit Fall Fest는 IBM Quantum의 지원 아래 대학생과 자원봉사 운영진이 기획·운영하는 글로벌 양자컴퓨팅 행사입니다. 각 대학과 지역에서 양자컴퓨팅에 관심 있는 사람들이 모여 배우고 교류하며, 양자 커뮤니티를 넓혀갑니다.",
+      localBody: "고려대학교에서는 양자정보학회 QUICK이 주최하여 연사 강연, 온라인 Qiskit 강의, 퀴즈, 해커톤을 진행합니다. 전공이나 양자컴퓨팅 경험과 관계없이 고려대학교 학생이라면 참여할 수 있으며, 행사 세션에서 필요한 내용을 함께 배워갑니다.",
     },
     program: {
       eyebrow: "Program",
@@ -99,14 +100,14 @@ export const eventContent = {
     partners: {
       eyebrow: "Partners",
       title: "주최 · 후원",
-      body: "Qiskit Fall Fest 2026은 고려대학교 양자정보학회 QUICK이 주최하고 IBM Quantum이 후원하며, 고려대학교 양자대학원이 함께합니다.",
+      body: "Qiskit Fall Fest 2026은 고려대학교 양자정보학회 QUICK이 주최하고, IBM Quantum·고려대학교 양자대학원·QISCA가 후원합니다.",
       logoAreaLabel: "주최 및 후원 기관",
       hostLabel: "고려대학교 양자정보학회 QUICK",
       ibmLabel: "IBM Quantum",
       quantumSchoolLabel: "고려대학교 양자대학원",
     },
     footer: {
-      note: "공식 문의 이메일과 SNS는 확정 후 공개합니다.",
+      contactLabel: "공식 문의",
       copyright: "© Qiskit Fall Fest 2026",
     },
   },
@@ -139,7 +140,8 @@ export const eventContent = {
     about: {
       eyebrow: "About",
       title: "Introducing Qiskit Fall Fest 2026",
-      body: "This event is for Korea University students. The official purpose and theme will be published after organizer approval.",
+      body: "Qiskit Fall Fest is a global series of quantum computing events organized by university students and volunteer hosts with support from IBM Quantum. These events bring people together to learn, connect, and grow quantum communities on campuses and beyond.",
+      localBody: "At Korea University, QUICK hosts a program of guest talks, online Qiskit lectures, quizzes, and a hackathon. Korea University students are welcome regardless of their major or prior quantum computing experience. The event sessions will cover what participants need to get started.",
     },
     program: {
       eyebrow: "Program",
@@ -210,14 +212,14 @@ export const eventContent = {
     partners: {
       eyebrow: "Partners",
       title: "Host · Sponsors",
-      body: "Qiskit Fall Fest 2026 is hosted by QUICK, the Korea University Quantum Information Society, sponsored by IBM Quantum, and supported by the School of Quantum at Korea University.",
+      body: "Qiskit Fall Fest 2026 is hosted by QUICK, the Korea University Quantum Information Society, and sponsored by IBM Quantum, the School of Quantum at Korea University, and QISCA.",
       logoAreaLabel: "Host and sponsor organizations",
       hostLabel: "QUICK · Korea University Quantum Information Society",
       ibmLabel: "IBM Quantum",
       quantumSchoolLabel: "School of Quantum at Korea University",
     },
     footer: {
-      note: "Official contact email and social links will be published after confirmation.",
+      contactLabel: "Contact",
       copyright: "© Qiskit Fall Fest 2026",
     },
   },
