@@ -76,8 +76,8 @@ export const eventContent = {
           answer: "네. 전공이나 양자컴퓨팅·Qiskit 경험과 관계없이 참가할 수 있습니다. 행사 세션에서 필요한 내용을 안내하므로 처음 접하는 분도 참여하실 수 있습니다.",
         },
         {
-          question: "수료증을 받으려면 어떤 조건을 충족해야 하나요?",
-          answer: "수료증을 받으려면 킥오프 및 연사 강연, 온라인 Qiskit 강의, 간이 퀴즈, 본행사(IBM 연사 강연 및 해커톤)를 포함한 모든 행사에 참여해야 합니다.",
+          question: "참가확인증을 받으려면 어떤 조건을 충족해야 하나요?",
+          answer: "참가확인증을 받으려면 킥오프 및 연사 강연, 온라인 Qiskit 강의, 간이 퀴즈, 본행사(IBM 연사 강연 및 해커톤)를 포함한 모든 행사에 참여해야 합니다.",
         },
         {
           question: "개인으로 참가할 수 있나요?",
@@ -188,8 +188,8 @@ export const eventContent = {
           answer: "Yes. You can participate regardless of your major or prior experience with quantum computing or Qiskit. The event sessions will cover what you need, so beginners are welcome.",
         },
         {
-          question: "What are the requirements for a certificate of completion?",
-          answer: "To receive a certificate of completion, you must participate in all event activities: the kickoff and guest talk, online Qiskit lectures, short quizzes, and the main event (IBM guest talk and hackathon).",
+          question: "What are the requirements for a certificate of participation?",
+          answer: "To receive a certificate of participation, you must participate in all event activities: the kickoff and guest talk, online Qiskit lectures, short quizzes, and the main event (IBM guest talk and hackathon).",
         },
         {
           question: "Can I participate individually?",
