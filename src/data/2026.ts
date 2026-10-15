@@ -28,7 +28,7 @@ export const eventContent = {
     about: {
       eyebrow: "About",
       title: "Qiskit Fall Fest 2026을 소개합니다!",
-      body: "Qiskit Fall Fest는 IBM Quantum의 지원 아래 대학생과 자원봉사 운영진이 기획·운영하는 글로벌 양자컴퓨팅 행사입니다. 각 대학과 지역에서 양자컴퓨팅에 관심 있는 사람들이 모여 배우고 교류하며, 양자 커뮤니티를 넓혀갑니다.",
+      body: "Qiskit Fall Fest는 IBM Quantum의 지원 아래 전 세계 학생 커뮤니티가 주도하는 양자컴퓨팅 행사입니다. 각 대학과 지역에서 양자컴퓨팅에 관심 있는 사람들이 모여 배우고 교류하며, 양자 커뮤니티를 넓혀갑니다.",
       localBody: "고려대학교에서는 양자정보학회 QUICK이 주최하여 연사 강연, 온라인 Qiskit 강의, 퀴즈, 해커톤을 진행합니다. 전공이나 양자컴퓨팅 경험과 관계없이 고려대학교 학생이라면 참여할 수 있으며, 행사 세션에서 필요한 내용을 함께 배워갑니다.",
     },
     program: {
@@ -143,7 +143,7 @@ export const eventContent = {
     about: {
       eyebrow: "About",
       title: "Introducing Qiskit Fall Fest 2026",
-      body: "Qiskit Fall Fest is a global series of quantum computing events organized by university students and volunteer hosts with support from IBM Quantum. These events bring people together to learn, connect, and grow quantum communities on campuses and beyond.",
+      body: "Qiskit Fall Fest is a global series of quantum computing events led by student communities with support from IBM Quantum. These events bring people together to learn, connect, and grow quantum communities on campuses and beyond.",
       localBody: "At Korea University, QUICK hosts a program of guest talks, online Qiskit lectures, quizzes, and a hackathon. Korea University students are welcome regardless of their major or prior quantum computing experience. The event sessions will cover what participants need to get started.",
     },
     program: {
