@@ -7,7 +7,6 @@ import eventArtwork from "../../logo/Fall Fest Sticker Small.png";
 import qiskitPictogram from "../../Pictogram/SVG/qiskit_purple-60.svg";
 import ibmQuantumLogotype from "../../IBM_Quantum/IBM_Quantum/Raster/RGB/IBM_Quantum_logotype_pos_RGB.png";
 import universityLogo from "../../logo/black1negative.gif";
-import venueMap from "../../logo/하나과학관.png";
 import quantumSchoolLogo from "../../logo/고려대학교양자대학원1.png";
 import qiscaLogo from "../../logo/QISCA logo.png";
 
@@ -152,7 +151,7 @@ const englishUrl = new URL("/2026/en/", canonical);
         </div>
         <div class="program-grid">
           {content.program.days.map((day, index) => (
-            <article class:list={["program-day", { "program-main-event": "badge" in day }]}>
+            <article class:list={["program-day", { "program-in-person": "badge" in day }]}>
               <span class="program-index" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
               {"badge" in day && <span class="program-highlight">{day.badge}</span>}
               <div class="program-content">
@@ -188,7 +187,11 @@ const englishUrl = new URL("/2026/en/", canonical);
           <h2 id="venue-title">{content.venue.title}</h2>
           <p class="lead">{content.venue.body}</p>
         </div>
-        <img class="venue-map" src={venueMap.src} width={venueMap.width} height={venueMap.height} alt={content.venue.mapLabel} loading="lazy" />
+        <dl class="info-list">
+          {content.venue.sessions.map((session) => (
+            <div><dt>{session.date}</dt><dd>{session.location}</dd></div>
+          ))}
+        </dl>
       </section>
 
       <section class="section split" id="faq" aria-labelledby="faq-title">

@@ -21,7 +21,7 @@ export const eventContent = {
       dateLabel: "일정",
       date: "2026. 11. 9. – 11. 19.",
       venueLabel: "장소",
-      venue: "고려대학교 하나과학관",
+      venue: "고려대학교 메디힐지구환경관 · 아산이학관",
       linkLabel: "행사 안내 보기",
       registrationLabel: "10월 15일 신청 시작",
     },
@@ -34,12 +34,12 @@ export const eventContent = {
     program: {
       eyebrow: "Program",
       title: "프로그램",
-      body: "킥오프 및 연사 강연, 온라인 Qiskit 강의와 간이 퀴즈 배포, IBM 연사 강연과 해커톤을 진행합니다.",
+      body: "킥오프 및 연사 강연, 온라인 Qiskit 강의와 연습 퀴즈 배포, IBM 연사 강연과 해커톤을 진행합니다.",
       days: [
-        { date: "11월 9일 (월)", title: "킥오프 및 연사 강연", detail: "김민혁 교수님 강연", time: "18:00–20:30", format: "대면" },
+        { date: "11월 9일 (월)", title: "킥오프 및 연사 강연", detail: "김민혁 교수님 강연 · 메디힐지구환경관 유임순홀", badge: "대면행사", time: "18:00–20:30", format: "대면" },
         { date: "11월 12일 (목)", title: "Qiskit 강의 배포", detail: "온라인 강의 배포", time: "18:00", format: "온라인" },
-        { date: "11월 14–15일 (토–일)", title: "간이 퀴즈 배포", detail: "기간 중 온라인 퀴즈 공개", time: "기간 중", format: "온라인" },
-        { date: "11월 19일 (목)", title: "IBM 강연 + 해커톤", detail: "", badge: "본행사", time: "18:00–21:00", format: "대면" },
+        { date: "11월 14–15일 (토–일)", title: "연습 퀴즈 배포", detail: "기간 중 온라인 퀴즈 공개", time: "기간 중", format: "온라인" },
+        { date: "11월 19일 (목)", title: "IBM 강연 + 해커톤", detail: "아산이학관 231호", badge: "대면행사", time: "18:00–21:00", format: "대면" },
       ],
     },
     registration: {
@@ -56,8 +56,11 @@ export const eventContent = {
     venue: {
       eyebrow: "Venue",
       title: "장소 안내",
-      body: "대면 세션은 고려대학교 하나과학관 B206에서 진행될 예정입니다. 최종 강의실과 교통 안내는 확정 후 공개합니다.",
-      mapLabel: "고려대학교 하나과학관 약도",
+      body: "대면행사는 날짜에 따라 장소가 다릅니다. 참석할 날짜의 장소를 확인해 주세요.",
+      sessions: [
+        { date: "11월 9일 (월)", location: "고려대학교 메디힐지구환경관 유임순홀" },
+        { date: "11월 19일 (목)", location: "고려대학교 아산이학관 231호" },
+      ],
     },
     faq: {
       eyebrow: "FAQ",
@@ -77,7 +80,7 @@ export const eventContent = {
         },
         {
           question: "참가확인증을 받으려면 어떤 조건을 충족해야 하나요?",
-          answer: "참가확인증을 받으려면 킥오프 및 연사 강연, 온라인 Qiskit 강의, 간이 퀴즈, 본행사(IBM 연사 강연 및 해커톤)를 포함한 모든 행사에 참여해야 합니다.",
+          answer: "참가확인증을 받으려면 킥오프 및 연사 강연, 온라인 Qiskit 강의, 연습 퀴즈, IBM 연사 강연 및 해커톤을 포함한 모든 행사에 참여해야 합니다.",
         },
         {
           question: "개인으로 참가할 수 있나요?",
@@ -93,7 +96,7 @@ export const eventContent = {
         },
         {
           question: "행사는 어디에서 진행되나요?",
-          answer: "대면 세션은 고려대학교 하나과학관 B206에서 진행될 예정입니다. 최종 강의실은 확정 후 홈페이지에 안내합니다.",
+          answer: "11월 9일은 고려대학교 메디힐지구환경관 유임순홀, 11월 19일은 고려대학교 아산이학관 231호에서 진행됩니다.",
         },
       ],
     },
@@ -133,7 +136,7 @@ export const eventContent = {
       dateLabel: "Date",
       date: "November 9–19, 2026",
       venueLabel: "Venue",
-      venue: "Korea University Hana Science Hall",
+      venue: "Korea University · Mediheal EES Hall & Asan Science Building",
       linkLabel: "View event information",
       registrationLabel: "Opens October 15",
     },
@@ -146,12 +149,12 @@ export const eventContent = {
     program: {
       eyebrow: "Program",
       title: "Program",
-      body: "The program includes a kickoff and guest talk, online Qiskit lectures and short quizzes, and an IBM guest talk and hackathon.",
+      body: "The program includes a kickoff and guest talk, online Qiskit lectures and practice quizzes, and an IBM guest talk and hackathon.",
       days: [
-        { date: "November 9 (Mon)", title: "Kickoff and Guest Talk", detail: "Talk by Professor Minhyuk Kim", time: "18:00–20:30", format: "In person" },
+        { date: "November 9 (Mon)", title: "Kickoff and Guest Talk", detail: "Talk by Professor Minhyuk Kim · Yoo-Im-Soon Hall, Mediheal EES Hall", badge: "In-Person Event", time: "18:00–20:30", format: "In person" },
         { date: "November 12 (Thu)", title: "Qiskit Lecture Release", detail: "Online lecture release", time: "18:00", format: "Online" },
-        { date: "November 14–15 (Sat–Sun)", title: "Short Quiz Release", detail: "Online quizzes available during the period", time: "During the period", format: "Online" },
-        { date: "November 19 (Thu)", title: "IBM Talk + Hackathon", detail: "", badge: "Main Event", time: "18:00–21:00", format: "In person" },
+        { date: "November 14–15 (Sat–Sun)", title: "Practice Quiz Release", detail: "Online quizzes available during the period", time: "During the period", format: "Online" },
+        { date: "November 19 (Thu)", title: "IBM Talk + Hackathon", detail: "Room 231, Asan Science Building", badge: "In-Person Event", time: "18:00–21:00", format: "In person" },
       ],
     },
     registration: {
@@ -168,8 +171,11 @@ export const eventContent = {
     venue: {
       eyebrow: "Venue",
       title: "Venue information",
-      body: "In-person sessions are planned for room B206 in Hana Science Hall at Korea University. The final room and transit details will be published after confirmation.",
-      mapLabel: "Map of Korea University Hana Science Hall",
+      body: "The in-person events take place at different venues. Please check the location for each date.",
+      sessions: [
+        { date: "November 9 (Mon)", location: "Yoo-Im-Soon Hall, Mediheal EES Hall, Korea University" },
+        { date: "November 19 (Thu)", location: "Room 231, Asan Science Building, Korea University" },
+      ],
     },
     faq: {
       eyebrow: "FAQ",
@@ -189,7 +195,7 @@ export const eventContent = {
         },
         {
           question: "What are the requirements for a certificate of participation?",
-          answer: "To receive a certificate of participation, you must participate in all event activities: the kickoff and guest talk, online Qiskit lectures, short quizzes, and the main event (IBM guest talk and hackathon).",
+          answer: "To receive a certificate of participation, you must participate in all event activities: the kickoff and guest talk, online Qiskit lectures, practice quizzes, and the IBM guest talk and hackathon.",
         },
         {
           question: "Can I participate individually?",
@@ -205,7 +211,7 @@ export const eventContent = {
         },
         {
           question: "Where will the event take place?",
-          answer: "In-person sessions are planned for room B206 in Hana Science Hall at Korea University. The final room will be announced on the website once confirmed.",
+          answer: "The November 9 event takes place in Yoo-Im-Soon Hall, Mediheal EES Hall, and the November 19 event in room 231, Asan Science Building, both at Korea University.",
         },
       ],
     },

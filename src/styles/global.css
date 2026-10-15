@@ -779,13 +779,13 @@ dd {
   transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
-.program-main-event {
+.program-in-person {
   position: relative;
   border: 2px solid var(--indigo);
   background: linear-gradient(145deg, var(--indigo-soft), var(--surface));
 }
 
-.program-main-event h3 {
+.program-in-person h3 {
   color: #FFFFFF;
 }
 
@@ -873,13 +873,6 @@ dd {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr);
   gap: clamp(3rem, 8vw, 8rem);
-}
-
-.venue-map {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--line);
 }
 
 details {
@@ -1050,7 +1043,7 @@ footer p {
     transform: translateY(-0.3rem);
   }
 
-  .program-main-event:hover {
+  .program-in-person:hover {
     border-color: var(--indigo);
   }
 
