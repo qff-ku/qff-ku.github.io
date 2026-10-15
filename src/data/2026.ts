@@ -23,7 +23,7 @@ export const eventContent = {
       venueLabel: "장소",
       venue: "고려대학교 메디힐지구환경관 · 아산이학관",
       linkLabel: "행사 안내 보기",
-      registrationLabel: "10월 15일 신청 시작",
+      registrationLabel: "10월 16일 신청 시작",
     },
     about: {
       eyebrow: "About",
@@ -48,10 +48,10 @@ export const eventContent = {
       statusLabel: "현재 상태",
       status: "신청 전",
       periodLabel: "신청 시작일",
-      period: "2026. 10. 15. (목)",
+      period: "2026. 10. 16. (금)",
       eligibilityLabel: "참가 대상",
       eligibility: "고려대학교 학생",
-      note: "참가 신청은 2026년 10월 15일(목)에 시작됩니다. 신청 폼은 오픈 당일 이곳에 연결합니다.",
+      note: "참가 신청은 2026년 10월 16일(금)에 시작됩니다. 신청 폼은 오픈 당일 이곳에 연결합니다.",
     },
     venue: {
       eyebrow: "Venue",
@@ -68,7 +68,7 @@ export const eventContent = {
       items: [
         {
           question: "참가 신청은 언제 시작하나요?",
-          answer: "참가 신청은 2026년 10월 15일(목)에 시작됩니다. 신청 폼은 오픈 당일 홈페이지에 연결됩니다.",
+          answer: "참가 신청은 2026년 10월 16일(금)에 시작됩니다. 신청 폼은 오픈 당일 홈페이지에 연결됩니다.",
         },
         {
           question: "고려대학교 학생이 아니어도 참가할 수 있나요?",
@@ -138,7 +138,7 @@ export const eventContent = {
       venueLabel: "Venue",
       venue: "Korea University · Mediheal EES Hall & Asan Science Building",
       linkLabel: "View event information",
-      registrationLabel: "Opens October 15",
+      registrationLabel: "Opens October 16",
     },
     about: {
       eyebrow: "About",
@@ -163,10 +163,10 @@ export const eventContent = {
       statusLabel: "Current status",
       status: "Not yet open",
       periodLabel: "Registration opens",
-      period: "Thursday, October 15, 2026",
+      period: "Friday, October 16, 2026",
       eligibilityLabel: "Eligibility",
       eligibility: "Korea University students",
-      note: "Registration opens Thursday, October 15, 2026. The registration form will be available here when registration opens.",
+      note: "Registration opens Friday, October 16, 2026. The registration form will be available here when registration opens.",
     },
     venue: {
       eyebrow: "Venue",
@@ -183,7 +183,7 @@ export const eventContent = {
       items: [
         {
           question: "When does registration open?",
-          answer: "Registration opens on Thursday, October 15, 2026. The registration form will be linked on the website that day.",
+          answer: "Registration opens on Friday, October 16, 2026. The registration form will be linked on the website that day.",
         },
         {
           question: "Can students from other universities participate?",
