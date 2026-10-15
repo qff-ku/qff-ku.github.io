@@ -871,8 +871,33 @@ dd {
 
 .venue {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(20rem, 1.2fr);
-  gap: clamp(3rem, 8vw, 8rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.venue-heading {
+  grid-column: 1 / -1;
+}
+
+.venue-card {
+  min-width: 0;
+  margin: 0;
+}
+
+.venue-card h3 {
+  margin: 0 0 0.75rem;
+}
+
+.venue-card p {
+  margin: 0 0 1.25rem;
+  color: var(--secondary);
+}
+
+.venue-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
 }
 
 details {
