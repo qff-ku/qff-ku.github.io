@@ -38,10 +38,10 @@ export const eventContent = {
       title: "프로그램",
       body: "킥오프 및 연사 강연, 온라인 Qiskit 강의와 연습 퀴즈 배포, IBM 연사 강연과 해커톤을 진행합니다.",
       days: [
-        { date: "11월 9일 (월)", title: "킥오프 및 연사 강연", detail: "김민혁 교수님 강연 · 메디힐지구환경관 유임순홀", badge: "대면행사", time: "18:00–20:30", format: "대면" },
+        { date: "11월 9일 (월)", title: "킥오프 및 연사 강연", detail: "김민혁 교수님 강연 · 추가 연사 1명(미정) · 메디힐지구환경관 유임순홀", badge: "대면행사", time: "18:00–20:30" },
         { date: "11월 12일 (목)", title: "Qiskit 강의 배포", detail: "온라인 강의 배포", time: "18:00", format: "온라인" },
         { date: "11월 14–15일 (토–일)", title: "연습 퀴즈 배포", detail: "기간 중 온라인 퀴즈 공개", time: "기간 중", format: "온라인" },
-        { date: "11월 19일 (목)", title: "IBM 강연 + 해커톤", detail: "아산이학관 231호", badge: "대면행사", time: "18:00–21:00", format: "대면" },
+        { date: "11월 19일 (목)", title: "IBM 강연 + 해커톤", detail: "아산이학관 231호", badge: "대면행사", time: "18:00–21:00" },
       ],
     },
     registration: {
@@ -151,12 +151,12 @@ export const eventContent = {
     program: {
       eyebrow: "Program",
       title: "Program",
-      body: "The program includes a kickoff and guest talk, online Qiskit lectures and practice quizzes, and an IBM guest talk and hackathon.",
+      body: "The program includes a kickoff and guest talks, online Qiskit lectures and practice quizzes, and an IBM guest talk and hackathon.",
       days: [
-        { date: "November 9 (Mon)", title: "Kickoff and Guest Talk", detail: "Talk by Professor Minhyuk Kim · Yoo-Im-Soon Hall, Mediheal EES Hall", badge: "In-Person Event", time: "18:00–20:30", format: "In person" },
+        { date: "November 9 (Mon)", title: "Kickoff and Guest Talks", detail: "Professor Minhyuk Kim and one additional speaker (TBA) · Yoo-Im-Soon Hall, Mediheal EES Hall", badge: "In-Person Event", time: "18:00–20:30" },
         { date: "November 12 (Thu)", title: "Qiskit Lecture Release", detail: "Online lecture release", time: "18:00", format: "Online" },
         { date: "November 14–15 (Sat–Sun)", title: "Practice Quiz Release", detail: "Online quizzes available during the period", time: "During the period", format: "Online" },
-        { date: "November 19 (Thu)", title: "IBM Talk + Hackathon", detail: "Room 231, Asan Science Building", badge: "In-Person Event", time: "18:00–21:00", format: "In person" },
+        { date: "November 19 (Thu)", title: "IBM Talk + Hackathon", detail: "Room 231, Asan Science Building", badge: "In-Person Event", time: "18:00–21:00" },
       ],
     },
     registration: {
@@ -197,7 +197,7 @@ export const eventContent = {
         },
         {
           question: "What are the requirements for a certificate of participation?",
-          answer: "To receive a certificate of participation, you must participate in all event activities: the kickoff and guest talk, online Qiskit lectures, practice quizzes, and the IBM guest talk and hackathon.",
+          answer: "To receive a certificate of participation, you must participate in all event activities: the kickoff and guest talks, online Qiskit lectures, practice quizzes, and the IBM guest talk and hackathon.",
         },
         {
           question: "Can I participate individually?",

@@ -769,6 +769,7 @@ dd {
 }
 
 .program-day {
+  position: relative;
   display: flex;
   min-height: 14rem;
   padding: 1.5rem;
@@ -780,7 +781,6 @@ dd {
 }
 
 .program-in-person {
-  position: relative;
   border: 2px solid var(--indigo);
   background: linear-gradient(145deg, var(--indigo-soft), var(--surface));
 }
@@ -844,10 +844,14 @@ dd {
 }
 
 .program-format {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
   padding: 0.35rem 0.7rem;
   border: 1px solid rgb(214 202 188 / 46%);
   border-radius: 999px;
   font-size: 0.8rem;
+  font-weight: 750;
 }
 
 .program-meta > span:first-child {
