@@ -186,22 +186,20 @@ const englishUrl = new URL("/2026/en/", canonical);
       </section>
 
       <section class="section venue" id="venue" aria-labelledby="venue-title">
-        <div class="venue-heading">
+        <div>
           <p class="eyebrow">{content.venue.eyebrow}</p>
           <h2 id="venue-title">{content.venue.title}</h2>
           <p class="lead">{content.venue.body}</p>
         </div>
-        {content.venue.sessions.map((session) => (
-          <figure class="venue-card">
-            <figcaption>
-              <h3>{session.date}</h3>
-              <p>{session.location}</p>
-            </figcaption>
-            <a href={asanMap.src} aria-label={isKorean ? `${session.location} 약도 크게 보기` : `View full-size map of ${session.location}`}>
-              <img class="venue-map" src={asanMap.src} width={asanMap.width} height={asanMap.height} alt={isKorean ? `${session.location} 약도` : `Map of ${session.location}`} loading="lazy" />
-            </a>
-          </figure>
-        ))}
+        <figure class="venue-card">
+          <figcaption>
+            <h3>{content.venue.date}</h3>
+            <p>{content.venue.location}</p>
+          </figcaption>
+          <a href={asanMap.src} aria-label={isKorean ? `${content.venue.location} 약도 크게 보기` : `View full-size map of ${content.venue.location}`}>
+            <img class="venue-map" src={asanMap.src} width={asanMap.width} height={asanMap.height} alt={isKorean ? `${content.venue.location} 약도` : `Map of ${content.venue.location}`} loading="lazy" />
+          </a>
+        </figure>
       </section>
 
       <section class="section split" id="faq" aria-labelledby="faq-title">

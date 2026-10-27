@@ -59,10 +59,8 @@ export const eventContent = {
       eyebrow: "Venue",
       title: "장소 안내",
       body: "11월 9일과 19일 대면행사는 모두 고려대학교 아산이학관 231호에서 진행됩니다. 약도를 누르면 크게 볼 수 있습니다.",
-      sessions: [
-        { date: "11월 9일 (월)", location: "고려대학교 아산이학관 231호" },
-        { date: "11월 19일 (목)", location: "고려대학교 아산이학관 231호" },
-      ],
+      date: "11월 9일 (월) · 11월 19일 (목)",
+      location: "고려대학교 아산이학관 231호",
     },
     faq: {
       eyebrow: "FAQ",
@@ -174,10 +172,8 @@ export const eventContent = {
       eyebrow: "Venue",
       title: "Venue information",
       body: "Both in-person events on November 9 and 19 take place in room 231, Asan Science Building, Korea University. Select a map to view it full size.",
-      sessions: [
-        { date: "November 9 (Mon)", location: "Room 231, Asan Science Building, Korea University" },
-        { date: "November 19 (Thu)", location: "Room 231, Asan Science Building, Korea University" },
-      ],
+      date: "November 9 (Mon) · November 19 (Thu)",
+      location: "Room 231, Asan Science Building, Korea University",
     },
     faq: {
       eyebrow: "FAQ",
