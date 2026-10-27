@@ -23,7 +23,7 @@ export const eventContent = {
       dateLabel: "일정",
       date: "2026. 11. 9. – 11. 19.",
       venueLabel: "장소",
-      venue: "고려대학교 메디힐지구환경관 · 아산이학관",
+      venue: "고려대학교 아산이학관 231호",
       linkLabel: "행사 안내 보기",
       registrationLabel: "참가 신청하기",
     },
@@ -38,7 +38,7 @@ export const eventContent = {
       title: "프로그램",
       body: "킥오프 및 연사 강연, 온라인 Qiskit 강의와 연습 퀴즈 배포, IBM 연사 강연과 해커톤을 진행합니다.",
       days: [
-        { date: "11월 9일 (월)", title: "킥오프 및 연사 강연", detail: "김민혁 교수님 강연 · 추가 연사 1명(추후공개) · 메디힐지구환경관 유임순홀", badge: "대면행사", time: "18:00–20:30" },
+        { date: "11월 9일 (월)", title: "킥오프 및 연사 강연", detail: "김민혁 교수님 강연 · 추가 연사 1명(추후공개) · 아산이학관 231호", badge: "대면행사", time: "18:00–20:30" },
         { date: "11월 12일 (목)", title: "Qiskit 강의 배포", detail: "온라인 강의 배포", time: "18:00", format: "온라인" },
         { date: "11월 14–15일 (토–일)", title: "연습 퀴즈 배포", detail: "기간 중 온라인 퀴즈 공개", time: "기간 중", format: "온라인" },
         { date: "11월 19일 (목)", title: "IBM 강연 + 해커톤", detail: "아산이학관 231호", badge: "대면행사", time: "18:00–21:00" },
@@ -58,9 +58,9 @@ export const eventContent = {
     venue: {
       eyebrow: "Venue",
       title: "장소 안내",
-      body: "대면행사는 날짜에 따라 장소가 다릅니다. 참석할 날짜의 장소를 확인해 주세요. 약도를 누르면 크게 볼 수 있습니다.",
+      body: "11월 9일과 19일 대면행사는 모두 고려대학교 아산이학관 231호에서 진행됩니다. 약도를 누르면 크게 볼 수 있습니다.",
       sessions: [
-        { date: "11월 9일 (월)", location: "고려대학교 메디힐지구환경관 유임순홀" },
+        { date: "11월 9일 (월)", location: "고려대학교 아산이학관 231호" },
         { date: "11월 19일 (목)", location: "고려대학교 아산이학관 231호" },
       ],
     },
@@ -98,7 +98,7 @@ export const eventContent = {
         },
         {
           question: "행사는 어디에서 진행되나요?",
-          answer: "11월 9일은 고려대학교 메디힐지구환경관 유임순홀, 11월 19일은 고려대학교 아산이학관 231호에서 진행됩니다.",
+          answer: "11월 9일과 19일 모두 고려대학교 아산이학관 231호에서 진행됩니다.",
         },
       ],
     },
@@ -138,7 +138,7 @@ export const eventContent = {
       dateLabel: "Date",
       date: "November 9–19, 2026",
       venueLabel: "Venue",
-      venue: "Korea University · Mediheal EES Hall & Asan Science Building",
+      venue: "Korea University · Room 231, Asan Science Building",
       linkLabel: "View event information",
       registrationLabel: "Register now",
     },
@@ -153,7 +153,7 @@ export const eventContent = {
       title: "Program",
       body: "The program includes a kickoff and guest talks, online Qiskit lectures and practice quizzes, and an IBM guest talk and hackathon.",
       days: [
-        { date: "November 9 (Mon)", title: "Kickoff and Guest Talks", detail: "Professor Minhyuk Kim and one additional speaker (TBA) · Yoo-Im-Soon Hall, Mediheal EES Hall", badge: "In-Person Event", time: "18:00–20:30" },
+        { date: "November 9 (Mon)", title: "Kickoff and Guest Talks", detail: "Professor Minhyuk Kim and one additional speaker (TBA) · Room 231, Asan Science Building", badge: "In-Person Event", time: "18:00–20:30" },
         { date: "November 12 (Thu)", title: "Qiskit Lecture Release", detail: "Online lecture release", time: "18:00", format: "Online" },
         { date: "November 14–15 (Sat–Sun)", title: "Practice Quiz Release", detail: "Online quizzes available during the period", time: "During the period", format: "Online" },
         { date: "November 19 (Thu)", title: "IBM Talk + Hackathon", detail: "Room 231, Asan Science Building", badge: "In-Person Event", time: "18:00–21:00" },
@@ -173,9 +173,9 @@ export const eventContent = {
     venue: {
       eyebrow: "Venue",
       title: "Venue information",
-      body: "The in-person events take place at different venues. Please check the location for each date. Select a map to view it full size.",
+      body: "Both in-person events on November 9 and 19 take place in room 231, Asan Science Building, Korea University. Select a map to view it full size.",
       sessions: [
-        { date: "November 9 (Mon)", location: "Yoo-Im-Soon Hall, Mediheal EES Hall, Korea University" },
+        { date: "November 9 (Mon)", location: "Room 231, Asan Science Building, Korea University" },
         { date: "November 19 (Thu)", location: "Room 231, Asan Science Building, Korea University" },
       ],
     },
@@ -213,7 +213,7 @@ export const eventContent = {
         },
         {
           question: "Where will the event take place?",
-          answer: "The November 9 event takes place in Yoo-Im-Soon Hall, Mediheal EES Hall, and the November 19 event in room 231, Asan Science Building, both at Korea University.",
+          answer: "Both the November 9 and 19 events take place in room 231, Asan Science Building, Korea University.",
         },
       ],
     },

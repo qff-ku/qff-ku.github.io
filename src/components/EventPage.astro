@@ -7,7 +7,6 @@ import eventArtwork from "../../logo/Fall Fest Sticker Small.png";
 import qiskitPictogram from "../../Pictogram/SVG/qiskit_purple-60.svg";
 import ibmQuantumLogotype from "../../IBM_Quantum/IBM_Quantum/Raster/RGB/IBM_Quantum_logotype_pos_RGB.png";
 import universityLogo from "../../logo/black1negative.gif";
-import medihealMap from "../../logo/메디힐지구환경관.png";
 import asanMap from "../../logo/아산이학관.png";
 import quantumSchoolLogo from "../../logo/고려대학교양자대학원1.png";
 import qiscaLogo from "../../logo/QISCA logo.png";
@@ -18,7 +17,6 @@ interface Props {
 
 const { content } = Astro.props;
 const isKorean = content.lang === "ko";
-const venueMaps = [medihealMap, asanMap];
 const [heroTitle, heroSubtitle] = content.hero.heading.split("\n");
 const heroName = heroTitle.slice(0, -5);
 const heroYear = heroTitle.slice(-4);
@@ -193,14 +191,14 @@ const englishUrl = new URL("/2026/en/", canonical);
           <h2 id="venue-title">{content.venue.title}</h2>
           <p class="lead">{content.venue.body}</p>
         </div>
-        {content.venue.sessions.map((session, index) => (
+        {content.venue.sessions.map((session) => (
           <figure class="venue-card">
             <figcaption>
               <h3>{session.date}</h3>
               <p>{session.location}</p>
             </figcaption>
-            <a href={venueMaps[index].src} aria-label={isKorean ? `${session.location} 약도 크게 보기` : `View full-size map of ${session.location}`}>
-              <img class="venue-map" src={venueMaps[index].src} width={venueMaps[index].width} height={venueMaps[index].height} alt={isKorean ? `${session.location} 약도` : `Map of ${session.location}`} loading="lazy" />
+            <a href={asanMap.src} aria-label={isKorean ? `${session.location} 약도 크게 보기` : `View full-size map of ${session.location}`}>
+              <img class="venue-map" src={asanMap.src} width={asanMap.width} height={asanMap.height} alt={isKorean ? `${session.location} 약도` : `Map of ${session.location}`} loading="lazy" />
             </a>
           </figure>
         ))}
