@@ -41,7 +41,7 @@ export const eventContent = {
         { date: "11월 9일 (월)", title: "킥오프 및 연사 강연", detail: "김민혁 교수님 강연 · 추가 연사 1명(추후공개) · 아산이학관 231호", badge: "대면행사", time: "18:00–20:30" },
         { date: "11월 12일 (목)", title: "Qiskit 강의 배포", detail: "온라인 강의 배포", time: "18:00", format: "온라인" },
         { date: "11월 14–15일 (토–일)", title: "연습 퀴즈 배포", detail: "기간 중 온라인 퀴즈 공개", time: "기간 중", format: "온라인" },
-        { date: "11월 19일 (목)", title: "IBM 강연 + 해커톤", detail: "아산이학관 231호", badge: "대면행사", time: "18:00–21:00" },
+        { date: "11월 19일 (목)", title: "IBM 강연 + 해커톤", detail: "아산이학관 231호", badge: "대면행사", time: "18:00–22:00" },
       ],
     },
     registration: {
@@ -154,7 +154,7 @@ export const eventContent = {
         { date: "November 9 (Mon)", title: "Kickoff and Guest Talks", detail: "Professor Minhyuk Kim and one additional speaker (TBA) · Room 231, Asan Science Building", badge: "In-Person Event", time: "18:00–20:30" },
         { date: "November 12 (Thu)", title: "Qiskit Lecture Release", detail: "Online lecture release", time: "18:00", format: "Online" },
         { date: "November 14–15 (Sat–Sun)", title: "Practice Quiz Release", detail: "Online quizzes available during the period", time: "During the period", format: "Online" },
-        { date: "November 19 (Thu)", title: "IBM Talk + Hackathon", detail: "Room 231, Asan Science Building", badge: "In-Person Event", time: "18:00–21:00" },
+        { date: "November 19 (Thu)", title: "IBM Talk + Hackathon", detail: "Room 231, Asan Science Building", badge: "In-Person Event", time: "18:00–22:00" },
       ],
     },
     registration: {
