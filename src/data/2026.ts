@@ -1,5 +1,3 @@
-export const registrationUrl = "https://forms.gle/x5gaVBUjBE4tF8H57";
-
 export const eventContent = {
   ko: {
     lang: "ko",
@@ -17,7 +15,7 @@ export const eventContent = {
       ["#faq", "FAQ"],
     ],
     hero: {
-      status: "참가 신청 중",
+      status: "참가 신청 마감",
       heading: "Qiskit Fall Fest 2026\n행사 안내",
       summary: "강연·Qiskit 강의·퀴즈·해커톤으로 이어지는 프로그램과 참가 안내를 확인하세요.",
       dateLabel: "일정",
@@ -25,7 +23,7 @@ export const eventContent = {
       venueLabel: "장소",
       venue: "고려대학교 아산이학관 231호",
       linkLabel: "행사 안내 보기",
-      registrationLabel: "참가 신청하기",
+      registrationLabel: "참가 신청 마감",
     },
     about: {
       eyebrow: "About",
@@ -38,7 +36,7 @@ export const eventContent = {
       title: "프로그램",
       body: "킥오프 및 연사 강연, 온라인 Qiskit 강의와 연습 퀴즈 배포, IBM 연사 강연과 해커톤을 진행합니다.",
       days: [
-        { date: "11월 9일 (월)", title: "킥오프 및 연사 강연", detail: "김민혁 교수님 강연 · 추가 연사 1명(추후공개) · 아산이학관 231호", badge: "대면행사", time: "18:00–20:30" },
+        { date: "11월 9일 (월)", title: "킥오프 및 연사 강연", detail: "김민혁 교수 · NORMA 정현철 대표 강연 · 아산이학관 231호", badge: "대면행사", time: "18:00–20:30" },
         { date: "11월 12일 (목)", title: "Qiskit 강의 배포", detail: "온라인 강의 배포", time: "18:00", format: "온라인" },
         { date: "11월 14–15일 (토–일)", title: "연습 퀴즈 배포", detail: "기간 중 온라인 퀴즈 공개", time: "기간 중", format: "온라인" },
         { date: "11월 19일 (목)", title: "IBM 강연 + 해커톤", detail: "아산이학관 231호", badge: "대면행사", time: "18:00–22:00" },
@@ -48,12 +46,12 @@ export const eventContent = {
       eyebrow: "Registration",
       title: "참가 안내",
       statusLabel: "현재 상태",
-      status: "신청 중",
+      status: "마감",
       periodLabel: "신청 시작일",
       period: "2026. 10. 16. (금)",
       eligibilityLabel: "참가 대상",
       eligibility: "고려대학교 학생",
-      note: "참가 신청이 진행 중입니다. 아래 버튼을 눌러 Google Forms에서 신청해 주세요.",
+      note: "참가 신청이 마감되었습니다. 신청해 주셔서 감사합니다.",
     },
     venue: {
       eyebrow: "Venue",
@@ -68,7 +66,7 @@ export const eventContent = {
       items: [
         {
           question: "참가 신청은 어떻게 하나요?",
-          answer: "홈페이지의 ‘참가 신청하기’ 버튼을 눌러 Google Forms에서 신청해 주세요. 참가 신청은 개인 단위로 진행됩니다.",
+          answer: "참가 신청이 마감되었습니다.",
         },
         {
           question: "고려대학교 학생이 아니어도 참가할 수 있나요?",
@@ -130,7 +128,7 @@ export const eventContent = {
       ["#faq", "FAQ"],
     ],
     hero: {
-      status: "Registration open",
+      status: "Registration closed",
       heading: "Qiskit Fall Fest 2026\nEvent Information",
       summary: "Explore the talks, Qiskit lectures, quizzes, hackathon, and registration details.",
       dateLabel: "Date",
@@ -138,7 +136,7 @@ export const eventContent = {
       venueLabel: "Venue",
       venue: "Korea University · Room 231, Asan Science Building",
       linkLabel: "View event information",
-      registrationLabel: "Register now",
+      registrationLabel: "Registration closed",
     },
     about: {
       eyebrow: "About",
@@ -151,7 +149,7 @@ export const eventContent = {
       title: "Program",
       body: "The program includes a kickoff and guest talks, online Qiskit lectures and practice quizzes, and an IBM guest talk and hackathon.",
       days: [
-        { date: "November 9 (Mon)", title: "Kickoff and Guest Talks", detail: "Professor Minhyuk Kim and one additional speaker (TBA) · Room 231, Asan Science Building", badge: "In-Person Event", time: "18:00–20:30" },
+        { date: "November 9 (Mon)", title: "Kickoff and Guest Talks", detail: "Professor Minhyuk Kim and NORMA CEO Jung Hyun-chul · Room 231, Asan Science Building", badge: "In-Person Event", time: "18:00–20:30" },
         { date: "November 12 (Thu)", title: "Qiskit Lecture Release", detail: "Online lecture release", time: "18:00", format: "Online" },
         { date: "November 14–15 (Sat–Sun)", title: "Practice Quiz Release", detail: "Online quizzes available during the period", time: "During the period", format: "Online" },
         { date: "November 19 (Thu)", title: "IBM Talk + Hackathon", detail: "Room 231, Asan Science Building", badge: "In-Person Event", time: "18:00–22:00" },
@@ -161,12 +159,12 @@ export const eventContent = {
       eyebrow: "Registration",
       title: "Registration",
       statusLabel: "Current status",
-      status: "Open",
-      periodLabel: "Registration opens",
+      status: "Closed",
+      periodLabel: "Registration opened",
       period: "Friday, October 16, 2026",
       eligibilityLabel: "Eligibility",
       eligibility: "Korea University students",
-      note: "Registration is open. Use the button below to sign up via Google Forms.",
+      note: "Registration has closed. Thank you for your interest.",
     },
     venue: {
       eyebrow: "Venue",
@@ -181,7 +179,7 @@ export const eventContent = {
       items: [
         {
           question: "How do I register?",
-          answer: "Use the ‘Register now’ button on this website to sign up via Google Forms. Please register individually.",
+          answer: "Registration has closed.",
         },
         {
           question: "Can students from other universities participate?",

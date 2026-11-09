@@ -655,25 +655,17 @@ h2 {
   color: var(--accent);
 }
 
-.registration-link {
+.registration-closed {
   display: flex;
   width: fit-content;
-  gap: 1rem;
   padding: 0.9rem 1.15rem;
-  align-items: center;
-  border: 1px solid var(--indigo);
+  border: 1px solid var(--line);
   border-radius: 0.5rem;
-  color: #FFFFFF;
-  background: var(--indigo);
-  box-shadow: 0 1rem 2rem rgb(0 0 0 / 35%);
+  color: var(--muted);
+  background: var(--surface);
   font-size: 1rem;
   font-weight: 800;
   line-height: 1.35;
-  text-decoration: none;
-}
-
-.registration-link span {
-  color: inherit;
 }
 
 .facts {
@@ -1055,10 +1047,6 @@ footer p {
   .language-nav a:hover,
   .text-link:hover {
     color: var(--accent);
-  }
-
-  .registration-link:hover {
-    background: #2948b7;
   }
 
   summary:hover {
