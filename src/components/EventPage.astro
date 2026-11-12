@@ -1,6 +1,7 @@
 ---
 import type { EventContent } from "../data/2026";
 import "../styles/global.css";
+import qnaTheme from "../styles/qna-theme.css?raw";
 import clubLogo from "../../logo/QUICK_LOGO2.png";
 import sidebarClubLogo from "../../logo/QUICK_LOGO1.png";
 import eventArtwork from "../../logo/Fall Fest Sticker Small.png";
@@ -36,6 +37,7 @@ const englishUrl = new URL("/2026/en/", canonical);
     <meta property="og:description" content={content.description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
+    <meta name="giscus:backlink" content={new URL("#qna", canonical)} />
     <meta property="og:locale" content={content.ogLocale} />
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="ko" href={koreanUrl} />
@@ -117,9 +119,61 @@ const englishUrl = new URL("/2026/en/", canonical);
               <dd>{content.hero.venue}</dd>
             </div>
           </dl>
-          <span class="registration-closed">{content.hero.registrationLabel}</span>
+          <div class="hero-actions">
+            <a class="materials-link" href="#materials">{content.materials.linkLabel}<span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#about">{content.hero.linkLabel}<span aria-hidden="true"> ↘</span></a>
+          </div>
           <p class="hero-summary">{content.hero.summary}</p>
-          <a class="text-link" href="#about">{content.hero.linkLabel}<span aria-hidden="true"> ↘</span></a>
+        </div>
+      </section>
+
+      <section class="section materials" id="materials" aria-labelledby="materials-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">{content.materials.eyebrow}</p>
+            <h2 id="materials-title">{content.materials.title}</h2>
+          </div>
+          <p>{content.materials.body}</p>
+        </div>
+        <div class="materials-grid">
+          {content.materials.items.map((item, index) => (
+            <article class:list={["material-card", { "material-featured": index === 0 }]} id={item.id} aria-labelledby={`${item.id}-title`}>
+              <div class="material-heading">
+                <p class="program-date">{item.date}</p>
+                <span class="material-status">{"status" in item ? item.status : content.materials.pendingLabel}</span>
+              </div>
+              <h3 id={`${item.id}-title`}>{item.title}</h3>
+              <p class="material-description">{item.description}</p>
+              {"videos" in item && (
+                <ol class="material-videos">
+                  {item.videos.map((title) => (
+                    <li>
+                      <button class="material-video" type="button" disabled>
+                        <span class="material-preview" aria-hidden="true">
+                          <svg viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="30" />
+                            <path d="M27 21L44 32L27 43Z" />
+                          </svg>
+                        </span>
+                        <span class="material-video-copy">
+                          <span class="material-video-title">{title}</span>
+                          <span class="material-video-status">{content.materials.pendingLabel}</span>
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ol>
+              )}
+              {"release" in item && <p class="material-release">{item.release}</p>}
+              <div class="material-actions">
+                {item.actions.map((action) => {
+                  if ("file" in action) return <a href={`/2026/materials/${action.file}`} download>{action.label}</a>;
+                  if ("href" in action) return <a href={action.href}>{action.label}</a>;
+                  return <button type="button" disabled>{action.label}</button>;
+                })}
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -160,6 +214,7 @@ const englishUrl = new URL("/2026/en/", canonical);
                 {day.detail && <p>{day.detail}</p>}
                 <div class="program-meta">
                   <span>{day.time}</span>
+                  {"materialsHref" in day && <a class="text-link" href={day.materialsHref}>{content.program.materialsLabel}<span aria-hidden="true"> ↗</span></a>}
                 </div>
               </div>
             </article>
@@ -210,6 +265,33 @@ const englishUrl = new URL("/2026/en/", canonical);
               <p>{item.answer}</p>
             </details>
           ))}
+        </div>
+      </section>
+
+      <section class="section qna" id="qna" aria-labelledby="qna-title">
+        <div class="section-heading">
+          <h2 id="qna-title">Q&amp;A</h2>
+          <p>{content.qna.body}</p>
+        </div>
+        <div class="giscus">
+          <script
+            is:inline
+            src="https://giscus.app/client.js"
+            data-repo="qff-ku/qff-ku.github.io"
+            data-repo-id="R_kgDOT6Gchg"
+            data-category="Q&A"
+            data-category-id="DIC_kwDOT6Gchs4DK8xC"
+            data-mapping="specific"
+            data-term="Qiskit Fall Fest 2026 Q&A"
+            data-strict="1"
+            data-reactions-enabled="0"
+            data-input-position="top"
+            data-theme={`data:text/css;base64,${Buffer.from(qnaTheme).toString("base64")}`}
+            data-lang={content.lang}
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async
+          ></script>
         </div>
       </section>
 

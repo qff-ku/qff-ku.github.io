@@ -1,3 +1,5 @@
+const practiceLabsUrl = "https://github.com/equivoque-jk/qff-2026-labs";
+
 export const eventContent = {
   ko: {
     lang: "ko",
@@ -8,16 +10,18 @@ export const eventContent = {
     languageLabel: "언어 선택",
     skipLabel: "본문 바로가기",
     nav: [
+      ["#materials", "강의·실습 자료"],
       ["#about", "행사 소개"],
       ["#program", "프로그램"],
       ["#registration", "참가 안내"],
       ["#venue", "장소"],
       ["#faq", "FAQ"],
+      ["#qna", "Q&A"],
     ],
     hero: {
       status: "참가 신청 마감",
       heading: "Qiskit Fall Fest 2026\n행사 안내",
-      summary: "강연·Qiskit 강의·퀴즈·해커톤으로 이어지는 프로그램과 참가 안내를 확인하세요.",
+      summary: "강연·양자정보기초 및 Qiskit 강의·퀴즈·해커톤으로 이어지는 프로그램과 참가 안내를 확인하세요.",
       dateLabel: "일정",
       date: "2026. 11. 9. – 11. 19.",
       venueLabel: "장소",
@@ -25,21 +29,59 @@ export const eventContent = {
       linkLabel: "행사 안내 보기",
       registrationLabel: "참가 신청 마감",
     },
+    materials: {
+      eyebrow: "Learning Resources",
+      title: "강의·실습 자료",
+      body: "강의 영상부터 실습 노트북까지, 행사에 필요한 자료를 이곳에서 확인하세요.",
+      linkLabel: "강의·실습 자료 보기",
+      pendingLabel: "공개 예정",
+      items: [
+        {
+          id: "qiskit-materials",
+          date: "11월 12일 (목)",
+          title: "양자정보기초 및 Qiskit 강의",
+          description: "세 편의 강의 영상으로 양자컴퓨팅을 배우고, 실습 노트북으로 직접 따라 해보세요.",
+          status: "파일 다운로드 가능",
+          videos: ["강의 영상 01", "강의 영상 02", "강의 영상 03"],
+          actions: [
+            { label: "교재 다운로드 (PDF)", file: "QFF2026_Textbook.pdf" },
+            { label: "실습 노트북 다운로드 (.ipynb)", file: "QFF2026_Workshop3.ipynb" },
+          ],
+        },
+        {
+          id: "quiz-materials",
+          date: "11월 14–15일 (토–일)",
+          title: "연습 퀴즈",
+          description: "Lab 1–5를 풀며 해커톤을 준비하세요.",
+          status: "공개",
+          actions: [{ label: "해커톤 연습 문제 (Lab 1–5)", href: practiceLabsUrl }],
+        },
+        {
+          id: "hackathon-materials",
+          date: "11월 19일 (목)",
+          title: "해커톤 실습 자료",
+          description: "해커톤에 사용할 실습 노트북과 문제를 확인하세요.",
+          release: "행사 당일 공개 예정",
+          actions: [{ label: "실습 파일 다운로드 (.ipynb)" }],
+        },
+      ],
+    },
     about: {
       eyebrow: "About",
       title: "Qiskit Fall Fest 2026을 소개합니다!",
       body: "Qiskit Fall Fest는 IBM Quantum의 지원 아래 전 세계 학생 커뮤니티가 주도하는 양자컴퓨팅 행사입니다. 각 대학과 지역에서 양자컴퓨팅에 관심 있는 사람들이 모여 배우고 교류하며, 양자 커뮤니티를 넓혀갑니다.",
-      localBody: "고려대학교에서는 양자정보학회 QUICK이 주최하여 연사 강연, 온라인 Qiskit 강의, 퀴즈, 해커톤을 진행합니다. 전공이나 양자컴퓨팅 경험과 관계없이 고려대학교 학생이라면 참여할 수 있으며, 행사 세션에서 필요한 내용을 함께 배워갑니다.",
+      localBody: "고려대학교에서는 양자정보학회 QUICK이 주최하여 연사 강연, 온라인 양자정보기초 및 Qiskit 강의, 퀴즈, 해커톤을 진행합니다. 전공이나 양자컴퓨팅 경험과 관계없이 고려대학교 학생이라면 참여할 수 있으며, 행사 세션에서 필요한 내용을 함께 배워갑니다.",
     },
     program: {
       eyebrow: "Program",
       title: "프로그램",
-      body: "킥오프 및 연사 강연, 온라인 Qiskit 강의와 연습 퀴즈 배포, IBM 연사 강연과 해커톤을 진행합니다.",
+      body: "킥오프 및 연사 강연, 온라인 양자정보기초 및 Qiskit 강의와 연습 퀴즈 배포, IBM 연사 강연과 해커톤을 진행합니다.",
+      materialsLabel: "자료 보기",
       days: [
         { date: "11월 9일 (월)", title: "킥오프 및 연사 강연", detail: "김민혁 교수 · NORMA 정현철 대표 강연 · 아산이학관 231호", badge: "대면행사", time: "18:00–20:30" },
-        { date: "11월 12일 (목)", title: "Qiskit 강의 배포", detail: "온라인 강의 배포", time: "18:00", format: "온라인" },
-        { date: "11월 14–15일 (토–일)", title: "연습 퀴즈 배포", detail: "기간 중 온라인 퀴즈 공개", time: "기간 중", format: "온라인" },
-        { date: "11월 19일 (목)", title: "IBM 강연 + 해커톤", detail: "아산이학관 231호", badge: "대면행사", time: "18:00–22:00" },
+        { date: "11월 12일 (목)", title: "양자정보기초 및 Qiskit 강의 배포", detail: "온라인 강의 배포", time: "18:00", format: "온라인", materialsHref: "#qiskit-materials" },
+        { date: "11월 14–15일 (토–일)", title: "연습 퀴즈 배포", detail: "기간 중 온라인 퀴즈 공개", time: "기간 중", format: "온라인", materialsHref: "#quiz-materials" },
+        { date: "11월 19일 (목)", title: "IBM 강연 + 해커톤", detail: "아산이학관 231호", badge: "대면행사", time: "18:00–22:00", materialsHref: "#hackathon-materials" },
       ],
     },
     registration: {
@@ -78,7 +120,7 @@ export const eventContent = {
         },
         {
           question: "참가확인증을 받으려면 어떤 조건을 충족해야 하나요?",
-          answer: "참가확인증을 받으려면 킥오프 및 연사 강연, 온라인 Qiskit 강의, 연습 퀴즈, IBM 연사 강연 및 해커톤을 포함한 모든 행사에 참여해야 합니다.",
+          answer: "참가확인증을 받으려면 킥오프 및 연사 강연, 온라인 양자정보기초 및 Qiskit 강의, 연습 퀴즈, IBM 연사 강연 및 해커톤을 포함한 모든 행사에 참여해야 합니다.",
         },
         {
           question: "개인으로 참가할 수 있나요?",
@@ -97,6 +139,9 @@ export const eventContent = {
           answer: "11월 9일과 19일 모두 고려대학교 아산이학관 231호에서 진행됩니다.",
         },
       ],
+    },
+    qna: {
+      body: "행사와 실습에 대한 질문을 남기고 운영진의 답변을 확인하세요. 질문과 답변은 공개되며, 글을 쓰려면 GitHub 로그인이 필요합니다.",
     },
     partners: {
       eyebrow: "Partners",
@@ -121,16 +166,18 @@ export const eventContent = {
     languageLabel: "Language selection",
     skipLabel: "Skip to content",
     nav: [
+      ["#materials", "Lectures & Materials"],
       ["#about", "About"],
       ["#program", "Program"],
       ["#registration", "Registration"],
       ["#venue", "Venue"],
       ["#faq", "FAQ"],
+      ["#qna", "Q&A"],
     ],
     hero: {
       status: "Registration closed",
       heading: "Qiskit Fall Fest 2026\nEvent Information",
-      summary: "Explore the talks, Qiskit lectures, quizzes, hackathon, and registration details.",
+      summary: "Explore the talks, lectures on quantum information fundamentals and Qiskit, quizzes, hackathon, and registration details.",
       dateLabel: "Date",
       date: "November 9–19, 2026",
       venueLabel: "Venue",
@@ -138,21 +185,59 @@ export const eventContent = {
       linkLabel: "View event information",
       registrationLabel: "Registration closed",
     },
+    materials: {
+      eyebrow: "Learning Resources",
+      title: "Lectures & Materials",
+      body: "Find lecture videos, practice notebooks, and everything you need for the event in one place.",
+      linkLabel: "View lectures & materials",
+      pendingLabel: "Coming soon",
+      items: [
+        {
+          id: "qiskit-materials",
+          date: "November 12 (Thu)",
+          title: "Quantum Information Fundamentals and Qiskit Lectures",
+          description: "Explore quantum computing through three lecture videos, then follow along with the practice notebooks.",
+          status: "Downloads available",
+          videos: ["Lecture video 01", "Lecture video 02", "Lecture video 03"],
+          actions: [
+            { label: "Download textbook (PDF)", file: "QFF2026_Textbook.pdf" },
+            { label: "Download practice notebook (.ipynb)", file: "QFF2026_Workshop3.ipynb" },
+          ],
+        },
+        {
+          id: "quiz-materials",
+          date: "November 14–15 (Sat–Sun)",
+          title: "Practice Quizzes",
+          description: "Work through Labs 1–5 to prepare for the hackathon.",
+          status: "Available",
+          actions: [{ label: "Hackathon practice (Labs 1–5)", href: practiceLabsUrl }],
+        },
+        {
+          id: "hackathon-materials",
+          date: "November 19 (Thu)",
+          title: "Hackathon Materials",
+          description: "Find the practice notebooks and challenges for the hackathon.",
+          release: "Available on the day of the event",
+          actions: [{ label: "Download notebook (.ipynb)" }],
+        },
+      ],
+    },
     about: {
       eyebrow: "About",
       title: "Introducing Qiskit Fall Fest 2026",
       body: "Qiskit Fall Fest is a global series of quantum computing events led by student communities with support from IBM Quantum. These events bring people together to learn, connect, and grow quantum communities on campuses and beyond.",
-      localBody: "At Korea University, QUICK hosts a program of guest talks, online Qiskit lectures, quizzes, and a hackathon. Korea University students are welcome regardless of their major or prior quantum computing experience. The event sessions will cover what participants need to get started.",
+      localBody: "At Korea University, QUICK hosts a program of guest talks, online lectures on quantum information fundamentals and Qiskit, quizzes, and a hackathon. Korea University students are welcome regardless of their major or prior quantum computing experience. The event sessions will cover what participants need to get started.",
     },
     program: {
       eyebrow: "Program",
       title: "Program",
-      body: "The program includes a kickoff and guest talks, online Qiskit lectures and practice quizzes, and an IBM guest talk and hackathon.",
+      body: "The program includes a kickoff, guest talks, online lectures on quantum information fundamentals and Qiskit, practice quizzes, an IBM guest talk, and a hackathon.",
+      materialsLabel: "View materials",
       days: [
         { date: "November 9 (Mon)", title: "Kickoff and Guest Talks", detail: "Professor Minhyuk Kim and NORMA CEO Jung Hyun-chul · Room 231, Asan Science Building", badge: "In-Person Event", time: "18:00–20:30" },
-        { date: "November 12 (Thu)", title: "Qiskit Lecture Release", detail: "Online lecture release", time: "18:00", format: "Online" },
-        { date: "November 14–15 (Sat–Sun)", title: "Practice Quiz Release", detail: "Online quizzes available during the period", time: "During the period", format: "Online" },
-        { date: "November 19 (Thu)", title: "IBM Talk + Hackathon", detail: "Room 231, Asan Science Building", badge: "In-Person Event", time: "18:00–22:00" },
+        { date: "November 12 (Thu)", title: "Quantum Information Fundamentals and Qiskit Lectures", detail: "Online lecture release", time: "18:00", format: "Online", materialsHref: "#qiskit-materials" },
+        { date: "November 14–15 (Sat–Sun)", title: "Practice Quiz Release", detail: "Online quizzes available during the period", time: "During the period", format: "Online", materialsHref: "#quiz-materials" },
+        { date: "November 19 (Thu)", title: "IBM Talk + Hackathon", detail: "Room 231, Asan Science Building", badge: "In-Person Event", time: "18:00–22:00", materialsHref: "#hackathon-materials" },
       ],
     },
     registration: {
@@ -191,7 +276,7 @@ export const eventContent = {
         },
         {
           question: "What are the requirements for a certificate of participation?",
-          answer: "To receive a certificate of participation, you must participate in all event activities: the kickoff and guest talks, online Qiskit lectures, practice quizzes, and the IBM guest talk and hackathon.",
+          answer: "To receive a certificate of participation, you must participate in all event activities: the kickoff and guest talks, online lectures on quantum information fundamentals and Qiskit, practice quizzes, and the IBM guest talk and hackathon.",
         },
         {
           question: "Can I participate individually?",
@@ -210,6 +295,9 @@ export const eventContent = {
           answer: "Both the November 9 and 19 events take place in room 231, Asan Science Building, Korea University.",
         },
       ],
+    },
+    qna: {
+      body: "Ask about the event or labs and read replies from the organizers. Questions and replies are public. Sign in to GitHub to post.",
     },
     partners: {
       eyebrow: "Partners",
