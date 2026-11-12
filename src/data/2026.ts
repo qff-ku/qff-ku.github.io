@@ -1,4 +1,9 @@
 const practiceLabsUrl = "https://github.com/equivoque-jk/qff-2026-labs";
+const workshopVideos = [
+  { title: "Workshop 1", href: "https://youtu.be/ztmh7s9As14" },
+  { title: "Workshop 2", href: "https://youtu.be/T9K4NuqTyGY" },
+  { title: "Workshop 3", href: "https://youtu.be/qlEo59Je5tc" },
+];
 
 export const eventContent = {
   ko: {
@@ -34,6 +39,7 @@ export const eventContent = {
       title: "강의·실습 자료",
       body: "강의 영상부터 실습 노트북까지, 행사에 필요한 자료를 이곳에서 확인하세요.",
       linkLabel: "강의·실습 자료 보기",
+      videoLinkLabel: "YouTube에서 보기",
       pendingLabel: "공개 예정",
       items: [
         {
@@ -41,8 +47,8 @@ export const eventContent = {
           date: "11월 12일 (목)",
           title: "양자정보기초 및 Qiskit 강의",
           description: "세 편의 강의 영상으로 양자컴퓨팅을 배우고, 실습 노트북으로 직접 따라 해보세요.",
-          status: "파일 다운로드 가능",
-          videos: ["강의 영상 01", "강의 영상 02", "강의 영상 03"],
+          status: "영상·자료 공개",
+          videos: workshopVideos,
           actions: [
             { label: "교재 다운로드 (PDF)", file: "QFF2026_Textbook.pdf" },
             { label: "실습 노트북 다운로드 (.ipynb)", file: "QFF2026_Workshop3.ipynb" },
@@ -190,6 +196,7 @@ export const eventContent = {
       title: "Lectures & Materials",
       body: "Find lecture videos, practice notebooks, and everything you need for the event in one place.",
       linkLabel: "View lectures & materials",
+      videoLinkLabel: "Watch on YouTube",
       pendingLabel: "Coming soon",
       items: [
         {
@@ -197,8 +204,8 @@ export const eventContent = {
           date: "November 12 (Thu)",
           title: "Quantum Information Fundamentals and Qiskit Lectures",
           description: "Explore quantum computing through three lecture videos, then follow along with the practice notebooks.",
-          status: "Downloads available",
-          videos: ["Lecture video 01", "Lecture video 02", "Lecture video 03"],
+          status: "Videos and downloads available",
+          videos: workshopVideos,
           actions: [
             { label: "Download textbook (PDF)", file: "QFF2026_Textbook.pdf" },
             { label: "Download practice notebook (.ipynb)", file: "QFF2026_Workshop3.ipynb" },

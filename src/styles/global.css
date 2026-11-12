@@ -774,6 +774,7 @@ h2 {
   background: rgb(13 15 20 / 35%);
   font: inherit;
   text-align: left;
+  text-decoration: none;
 }
 
 .material-preview {
@@ -1245,6 +1246,11 @@ footer p {
   .materials-link:hover,
   .material-actions a:hover {
     background: #2948b7;
+  }
+
+  .material-video:hover {
+    border-color: var(--indigo);
+    background: var(--indigo-soft);
   }
 
   summary:hover {

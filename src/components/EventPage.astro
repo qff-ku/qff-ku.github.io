@@ -146,9 +146,9 @@ const englishUrl = new URL("/2026/en/", canonical);
               <p class="material-description">{item.description}</p>
               {"videos" in item && (
                 <ol class="material-videos">
-                  {item.videos.map((title) => (
+                  {item.videos.map((video) => (
                     <li>
-                      <button class="material-video" type="button" disabled>
+                      <a class="material-video" href={video.href}>
                         <span class="material-preview" aria-hidden="true">
                           <svg viewBox="0 0 64 64" fill="none">
                             <circle cx="32" cy="32" r="30" />
@@ -156,10 +156,10 @@ const englishUrl = new URL("/2026/en/", canonical);
                           </svg>
                         </span>
                         <span class="material-video-copy">
-                          <span class="material-video-title">{title}</span>
-                          <span class="material-video-status">{content.materials.pendingLabel}</span>
+                          <span class="material-video-title">{video.title}</span>
+                          <span class="material-video-status">{content.materials.videoLinkLabel}</span>
                         </span>
-                      </button>
+                      </a>
                     </li>
                   ))}
                 </ol>
