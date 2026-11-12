@@ -772,25 +772,44 @@ h2 {
   border-radius: 0.35rem;
   color: #FFFFFF;
   background: rgb(13 15 20 / 35%);
-  font: inherit;
+  font-weight: 400;
+  list-style: none;
   text-align: left;
-  text-decoration: none;
+}
+
+.material-video::-webkit-details-marker {
+  display: none;
+}
+
+.material-video-details[open] .material-video {
+  border-color: var(--indigo);
 }
 
 .material-preview {
+  position: relative;
   display: grid;
   width: 6.5rem;
   aspect-ratio: 16 / 9;
   flex-shrink: 0;
   place-items: center;
   border: 1px solid rgb(52 86 209 / 45%);
-  color: var(--secondary);
+  color: #FFFFFF;
   background: radial-gradient(ellipse at center, var(--indigo-soft), transparent 75%), #0d0f14;
 }
 
+.material-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .material-preview svg {
+  position: absolute;
   width: 2rem;
   height: 2rem;
+  border-radius: 50%;
+  background: rgb(13 15 20 / 72%);
   stroke: currentColor;
   stroke-width: 1.25;
 }
@@ -811,6 +830,24 @@ h2 {
   color: var(--muted);
   font-size: 0.75rem;
   line-height: 1.4;
+}
+
+.material-video-player iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  margin-top: 0.65rem;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 0.35rem;
+  background: #000;
+}
+
+.material-video-source {
+  display: inline-block;
+  margin: 0.65rem 0 0.25rem;
+  font-size: 0.85rem;
 }
 
 .material-release {
@@ -1080,7 +1117,7 @@ dd {
   border: 1px solid var(--line);
 }
 
-details {
+.faq-list details {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }

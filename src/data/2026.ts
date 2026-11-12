@@ -1,8 +1,8 @@
 const practiceLabsUrl = "https://github.com/equivoque-jk/qff-2026-labs";
 const workshopVideos = [
-  { title: "Workshop 1", href: "https://youtu.be/ztmh7s9As14" },
-  { title: "Workshop 2", href: "https://youtu.be/T9K4NuqTyGY" },
-  { title: "Workshop 3", href: "https://youtu.be/qlEo59Je5tc" },
+  { title: "Workshop 1", id: "ztmh7s9As14" },
+  { title: "Workshop 2", id: "T9K4NuqTyGY" },
+  { title: "Workshop 3", id: "qlEo59Je5tc" },
 ];
 
 export const eventContent = {
@@ -39,6 +39,7 @@ export const eventContent = {
       title: "강의·실습 자료",
       body: "강의 영상부터 실습 노트북까지, 행사에 필요한 자료를 이곳에서 확인하세요.",
       linkLabel: "강의·실습 자료 보기",
+      videoPlayLabel: "사이트에서 재생",
       videoLinkLabel: "YouTube에서 보기",
       pendingLabel: "공개 예정",
       items: [
@@ -196,6 +197,7 @@ export const eventContent = {
       title: "Lectures & Materials",
       body: "Find lecture videos, practice notebooks, and everything you need for the event in one place.",
       linkLabel: "View lectures & materials",
+      videoPlayLabel: "Play on this page",
       videoLinkLabel: "Watch on YouTube",
       pendingLabel: "Coming soon",
       items: [
