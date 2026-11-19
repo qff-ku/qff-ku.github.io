@@ -1,4 +1,5 @@
 const practiceLabsUrl = "https://github.com/equivoque-jk/qff-2026-labs";
+const hackathonMaterialsUrl = "https://github.com/equivoque-jk/qff-2026-Challenge-Quiz";
 const workshopVideos = [
   { title: "Workshop 1", id: "ztmh7s9As14" },
   { title: "Workshop 2", id: "T9K4NuqTyGY" },
@@ -15,11 +16,11 @@ export const eventContent = {
     languageLabel: "언어 선택",
     skipLabel: "본문 바로가기",
     nav: [
-      ["#materials", "강의·실습 자료"],
       ["#about", "행사 소개"],
       ["#program", "프로그램"],
       ["#registration", "참가 안내"],
       ["#venue", "장소"],
+      ["#materials", "강의·실습 자료"],
       ["#faq", "FAQ"],
       ["#qna", "Q&A"],
     ],
@@ -68,8 +69,8 @@ export const eventContent = {
           date: "11월 19일 (목)",
           title: "해커톤 실습 자료",
           description: "해커톤에 사용할 실습 노트북과 문제를 확인하세요.",
-          release: "행사 당일 공개 예정",
-          actions: [{ label: "실습 파일 다운로드 (.ipynb)" }],
+          status: "공개",
+          actions: [{ label: "해커톤 실습 자료 보기", href: hackathonMaterialsUrl }],
         },
       ],
     },
@@ -173,11 +174,11 @@ export const eventContent = {
     languageLabel: "Language selection",
     skipLabel: "Skip to content",
     nav: [
-      ["#materials", "Lectures & Materials"],
       ["#about", "About"],
       ["#program", "Program"],
       ["#registration", "Registration"],
       ["#venue", "Venue"],
+      ["#materials", "Lectures & Materials"],
       ["#faq", "FAQ"],
       ["#qna", "Q&A"],
     ],
@@ -226,8 +227,8 @@ export const eventContent = {
           date: "November 19 (Thu)",
           title: "Hackathon Materials",
           description: "Find the practice notebooks and challenges for the hackathon.",
-          release: "Available on the day of the event",
-          actions: [{ label: "Download notebook (.ipynb)" }],
+          status: "Available",
+          actions: [{ label: "View hackathon materials", href: hackathonMaterialsUrl }],
         },
       ],
     },
